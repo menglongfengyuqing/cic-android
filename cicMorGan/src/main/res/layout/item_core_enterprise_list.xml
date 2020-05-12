@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="165dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/pic_mall_shadow">
+
+        <com.ztmg.cicmorgan.view.RoundImageView
+            android:id="@+id/iv_core_enterprise"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="fitXY"
+            android:src="@drawable/pic_mall_enterprise_moretocome"/>
+
+    </RelativeLayout>
+
+    <ImageView
+        android:id="@+id/iv_core"
+        android:layout_width="158dp"
+        android:layout_height="80dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/pic_mall_shadow"
+        android:scaleType="fitXY"
+        android:src="@drawable/pic_mall_enterprise_moretocome"
+        android:visibility="gone"/>
+    <!--<View-->
+    <!--android:layout_width="24dp"-->
+    <!--android:layout_height="102dp"-->
+    <!--android:background="@color/white"/>-->
+</RelativeLayout>

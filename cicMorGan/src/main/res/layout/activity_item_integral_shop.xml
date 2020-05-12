@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/white"
+              android:orientation="horizontal">
+
+    <LinearLayout
+        android:id="@+id/ll_first"
+        android:layout_width="fill_parent"
+        android:layout_height="247dp"
+        android:layout_gravity="center"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <RelativeLayout
+            android:layout_width="165dp"
+            android:layout_height="165dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/pic_mall_shadow">
+
+            <ImageView
+                android:id="@+id/white_bg"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_white_10"/>
+
+            <ImageView
+                android:id="@+id/iv_frist"
+                android:layout_width="125dp"
+                android:layout_height="125dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/img_mall_defaultforgoods"
+                android:scaleType="fitXY"/>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tv_frist_goods_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxEms="11"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="13sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:background="@drawable/pic_find_coin"
+                android:visibility="gone"/>
+
+            <TextView
+                android:id="@+id/tv_frist_goods_integral"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text=""
+                android:textColor="@color/text_d40f42"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="积分"
+                android:textColor="@color/text_d40f42"
+                android:textSize="13sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

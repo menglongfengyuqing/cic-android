@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#ffffff"
+              android:baselineAligned="false"
+              android:orientation="vertical">
+
+
+    <LinearLayout
+        android:id="@+id/category_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+
+        <!--<com.ztmg.cicmorgan.view.TabPageIndicator-->
+        <!--android:id="@+id/indicator"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="55dp"/>-->
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:layout_width="fill_parent"
+            android:layout_height="50sp"
+            android:background="#FFFFFF">
+
+
+            <RelativeLayout
+                android:id="@+id/rl0"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_goods_introduce"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="项目介绍"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+
+
+                <View
+                    android:id="@+id/view0"
+                    android:layout_width="65dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@color/text_a11c3f"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_goods_info"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="借款方信息"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+
+
+                <View
+                    android:id="@+id/view1"
+                    android:layout_width="65dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@color/text_a11c3f"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_goods_situation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="风控情况"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+
+
+                <View
+                    android:id="@+id/view2"
+                    android:layout_width="65dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@color/text_a11c3f"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/rl3"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_goods_recording"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_centerVertical="true"
+                    android:text="出借记录"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+
+
+                <View
+                    android:id="@+id/view3"
+                    android:layout_width="65dp"
+                    android:layout_height="2dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:background="@color/text_a11c3f"
+                    android:visibility="invisible"/>
+
+            </RelativeLayout>
+        </LinearLayout>
+
+        <View
+            style="@style/common_small_line"
+            android:layout_marginLeft="0dp"
+            android:layout_marginRight="0dp"/>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_goods_info"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_weight="1.0"-->
+        <!--android:gravity="center"-->
+        <!--android:text="借款方信息"-->
+        <!--android:textColor="@color/solarTextColor"-->
+        <!--android:textSize="15sp"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_goods_situation"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_weight="1.0"-->
+        <!--android:gravity="center"-->
+        <!--android:text="风控情况"-->
+        <!--android:textColor="@color/solarTextColor"-->
+        <!--android:textSize="15sp"/>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_goods_recording"-->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="fill_parent"-->
+        <!--android:layout_weight="1.0"-->
+        <!--android:gravity="center"-->
+        <!--android:text="出借记录"-->
+        <!--android:textColor="@color/solarTextColor"-->
+        <!--android:textSize="15sp"/>-->
+
+        <!--<View-->
+        <!--android:id="@+id/cursor"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="0.5dp"-->
+        <!--android:layout_marginLeft="15dp"-->
+        <!--android:layout_marginRight="15dp"-->
+        <!--android:background="@color/text_a11c3f"/>-->
+
+        <com.ztmg.cicmorgan.view.MyViewPager
+            android:id="@+id/view_pager"
+            android:layout_width="fill_parent"
+            android:layout_height="0dip"
+            android:layout_weight="1.0"/>
+    </LinearLayout>
+</LinearLayout>

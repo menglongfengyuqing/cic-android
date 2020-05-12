@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/text_cccccc"
+        android:progressDrawable="@drawable/progress_bg"/>
+
+
+    <com.scwang.smartrefresh.layout.SmartRefreshLayout
+        android:id="@+id/refreshLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:srlAccentColor="@color/black"
+        app:srlEnableAutoLoadMore="false"
+        app:srlEnableLoadMore="true"
+        app:srlEnableLoadMoreWhenContentNotFull="false"
+        app:srlEnablePreviewInEditMode="false"
+        app:srlPrimaryColor="@color/white">
+        <!--srlAccentColor srlPrimaryColor 将会改变 Header 和 Footer 的主题颜色-->
+
+        <com.scwang.smartrefresh.layout.header.ClassicsHeader
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="FixedBehind"/>
+        <!--FixedBehind可以让Header固定在内容的背后，下拉的时候效果同微信浏览器的效果-->
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white">
+
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_title"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pic_integral_title_bg"
+                        android:visibility="gone"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="77dp">
+
+                        <RelativeLayout
+                            android:id="@+id/ll_integral"
+                            android:layout_width="0dp"
+                            android:layout_height="77dp"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_integral_score"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/icon_mall_lottery"/>
+
+                            <TextView
+                                android:id="@+id/tv_integral_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/iv_integral_score"
+                                android:text="积分抽奖"
+                                android:textColor="@color/text_34393c"
+                                android:textSize="17sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_integral"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_integral_text"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@id/iv_integral_score"
+                                android:text=""
+                                android:textColor="@color/text_989898"
+                                android:textSize="11sp"/>
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/ll_exchange_record"
+                            android:layout_width="0dp"
+                            android:layout_height="77dp"
+                            android:layout_weight="1"
+                            android:gravity="center">
+
+                            <ImageView
+                                android:id="@+id/iv_integral_record"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:src="@drawable/icon_mall_records"/>
+
+                            <TextView
+                                android:id="@+id/tv_integral_record"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:layout_toRightOf="@id/iv_integral_record"
+                                android:text="我的奖品"
+                                android:textColor="@color/text_34393c"
+                                android:textSize="17sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@id/tv_integral_record"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@id/iv_integral_record"
+                                android:text="1111"
+                                android:textColor="@color/text_989898"
+                                android:textSize="11sp"
+                                android:visibility="invisible"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:layout_marginLeft="0dp"
+                    android:layout_marginRight="0dp"
+                    android:background="@color/text_f2f2f2"/>
+
+                <!--<com.d3rich.pulltorefresh.library.PullToRefreshGridView-->
+                <!--android:id="@+id/lv_new_goods_list"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp"-->
+                <!--android:divider="@null"-->
+                <!--android:horizontalSpacing="14dp"-->
+                <!--android:numColumns="2"-->
+                <!--android:scrollbars="none"-->
+                <!--android:verticalSpacing="15dp">-->
+                <!--</com.d3rich.pulltorefresh.library.PullToRefreshGridView>-->
+
+                <!--<com.jcodecraeer.xrecyclerview.XRecyclerView-->
+                <!--android:id="@+id/mXRecyclerView"-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="200dp"-->
+                <!--android:divider="@null"-->
+                <!--android:horizontalSpacing="14dp"-->
+                <!--android:nestedScrollingEnabled="false"-->
+                <!--android:numColumns="2"-->
+                <!--android:scrollbars="none"-->
+                <!--android:verticalSpacing="15dp">-->
+                <!--</com.jcodecraeer.xrecyclerview.XRecyclerView>-->
+
+                <TextView
+                    android:id="@+id/tv_header_red_envelope"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="出借红包"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="17sp"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mRecyclerView_envelope"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:listSelector="@android:color/transparent"
+                    android:nestedScrollingEnabled="false">
+                </android.support.v7.widget.RecyclerView>
+
+
+                <TextView
+                    android:id="@+id/tv_header_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@color/white"
+                    android:gravity="center"
+                    android:text="热门商品"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="17sp"/>
+
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/mRecyclerView_shop"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:listSelector="@android:color/transparent"
+                    android:nestedScrollingEnabled="false">
+                </android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+        </android.support.v4.widget.NestedScrollView>
+
+        <com.scwang.smartrefresh.layout.footer.ClassicsFooter
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:srlClassicsSpinnerStyle="FixedBehind"/>
+        <!--FixedBehind可以让Footer固定在内容的背后，下拉的时候效果同微信浏览器的效果-->
+    </com.scwang.smartrefresh.layout.SmartRefreshLayout>
+
+</LinearLayout>

@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/recharge_bg"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/pic_phone_sucess"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="充值成功！"
+        android:textColor="@color/yellow"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="成功充值"
+            android:textColor="@color/yellow"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_recharge_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:text=""
+            android:textColor="@color/yellow"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:background="@color/white"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_recharge_bank_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="15dp"
+            android:text="民生银行："
+            android:textColor="@color/investment_detail_text"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_recharge_bank_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="2dp"
+            android:text=""
+            android:textColor="@color/investment_detail_text"
+            android:textSize="13sp"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/bt_see_account"
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62dp"
+            android:layout_marginRight="62dp"
+            android:background="@drawable/bt_red"
+            android:text="查看账户"
+            android:textColor="@color/textColorWhite"
+            android:textSize="21sp"/>
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text="*市场有风险，出借需谨慎"
+            android:textColor="#c7c7c7"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+</LinearLayout>

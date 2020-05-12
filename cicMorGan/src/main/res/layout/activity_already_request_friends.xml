@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/bg_gray"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="61dp"
+        android:background="@color/white"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="手机号"
+            android:textColor="@color/text_989898"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="姓名"
+            android:textColor="@color/text_989898"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="注册时间"
+            android:textColor="@color/text_989898"
+            android:textSize="15sp"/>
+    </LinearLayout>
+
+    <View
+        style="@style/common_small_line"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.d3rich.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/lv_already_request_friends_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:scrollbars="none">
+        </com.d3rich.pulltorefresh.library.PullToRefreshListView>
+
+        <RelativeLayout
+            android:id="@+id/rl_no_request_friends_message"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_no_award"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/pic_emptypage_1"/>
+
+            <TextView
+                android:id="@+id/tv_no_award_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_no_award"
+                android:layout_centerInParent="true"
+                android:text="暂无邀请好友记录呦~"
+                android:textColor="@color/text_989898"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

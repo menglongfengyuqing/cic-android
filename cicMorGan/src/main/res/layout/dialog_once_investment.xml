@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/pic_investment_close"/>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:background="@color/white"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_investment_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="出借金额（元）："
+                    android:textColor="@color/phone_color"
+                    android:textSize="15sp"/>
+
+                <EditText
+                    android:id="@+id/et_investment_money"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tv_investment_text"
+                    android:background="@null"
+                    android:hint="1000元起投及100元整数倍"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:singleLine="true"
+                    android:textColor="@color/phone_color"
+                    android:textColorHint="#bcbcbc"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tv_all_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="5dp"
+                    android:padding="10dp"
+                    android:text="全投"
+                    android:textColor="@color/text_a11c3f"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#bcbcbc"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="25dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:text="预期出借利息（元）："
+                    android:textColor="@color/phone_color"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_rate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:text="0.00"
+                    android:textColor="#bcbcbc"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/pic_investment_formula"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:background="@color/white">
+
+                <TextView
+                    android:id="@+id/tv_available_money_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="15dp"
+                    android:text="可用余额（元）："
+                    android:textColor="@color/phone_color"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_available_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="5dp"
+                    android:layout_toRightOf="@id/tv_available_money_text"
+                    android:text="0.00"
+                    android:textColor="#bcbcbc"
+                    android:textSize="15sp"/>
+
+                <Button
+                    android:id="@+id/bt_recharge"
+                    android:layout_width="50dp"
+                    android:layout_height="20dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/bt_bg"
+                    android:text="充值"
+                    android:textColor="@color/white"
+                    android:textSize="10sp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#bcbcbc"/>
+
+            <LinearLayout
+                android:id="@+id/ll_voucher"
+                android:layout_width="fill_parent"
+                android:layout_height="49dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_voucher"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="10dp"
+                    android:text="您有0个优惠券可用"
+                    android:textColor="@color/text_a11c3f"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_voucher_money"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:text=""
+                    android:textColor="#bcbcbc"
+                    android:textSize="15sp"/>
+            </LinearLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:background="#bcbcbc"/>
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="17dp"
+                android:background="@color/white"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/iv_check_agreement"
+                    android:layout_width="18dp"
+                    android:layout_height="18dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginLeft="15dp"
+                    android:background="@drawable/pic_riskevaluation_checkbox_normal"/>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_agreement"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="知悉并同意《出借协议》"
+                        android:textColor="@color/text_a11c3f"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_risk_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="已阅《网络借贷风险提示》"
+                        android:textColor="@color/text_a11c3f"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_sex_hint"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="已阅《网络借贷平台禁止性行为》"
+                        android:textColor="@color/text_a11c3f"
+                        android:textSize="13sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_electronic_signature"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:text="知悉并同意《电子签章证书》"
+                        android:textColor="@color/text_a11c3f"
+                        android:textSize="13sp"/>
+                </LinearLayout>
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_investment"
+                android:layout_width="fill_parent"
+                android:layout_height="40dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="32dp"
+                android:background="@drawable/bt_red"
+                android:text="确定"
+                android:textColor="@color/white"
+                android:textSize="16sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+</RelativeLayout>

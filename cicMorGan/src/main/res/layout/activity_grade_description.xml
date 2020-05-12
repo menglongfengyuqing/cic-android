@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+
+    <include layout="@layout/activity_base"/>
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="15dp"
+        android:background="@drawable/pic_projectdetail_riskrate_description"/>
+
+    <TextView
+        android:id="@+id/note"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:text=""
+        android:textColor="@color/text_989898"
+        android:textSize="13sp"/>
+
+
+</LinearLayout>
+
+    <!--<?xml version="1.0" encoding="utf-8"?>-->
+    <!--<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="match_parent"-->
+    <!--android:orientation="vertical">-->
+
+    <!--<include layout="@layout/activity_base"/>-->
+
+    <!--<ScrollView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:scrollbars="none">-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="30dp"-->
+    <!--android:background="@color/white"-->
+    <!--android:orientation="vertical">-->
+
+
+    <!--<ImageView-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_margin="15dp"-->
+    <!--android:background="@drawable/pic_projectdetail_riskrate_description"/>-->
+
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="15dp"-->
+    <!--android:text="出借配置建议"-->
+    <!--android:textColor="@color/text_34393c"-->
+    <!--android:textSize="17sp"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="（内部评级，仅供参考）"-->
+    <!--android:textColor="@color/text_989898"-->
+    <!--android:textSize="15sp"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="8dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="25dp"-->
+    <!--android:background="@drawable/bg_grid_description1"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="建议作为主要出借"-->
+    <!--android:textColor="@color/text_989898"-->
+    <!--android:textSize="13sp"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="8dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="25dp"-->
+    <!--android:background="@drawable/bg_grid_description2"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="适当出借部分资金"-->
+    <!--android:textColor="@color/text_989898"-->
+    <!--android:textSize="13sp"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="8dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="25dp"-->
+    <!--android:background="@drawable/bg_grid_description3"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="尝试出借小部分资金"-->
+    <!--android:textColor="@color/text_989898"-->
+    <!--android:textSize="13sp"/>-->
+    <!--</LinearLayout>-->
+
+    <!--<LinearLayout-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginBottom="30dp"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:orientation="horizontal">-->
+
+    <!--<TextView-->
+    <!--android:layout_width="30dp"-->
+    <!--android:layout_height="8dp"-->
+    <!--android:layout_gravity="center"-->
+    <!--android:layout_marginLeft="25dp"-->
+    <!--android:background="@drawable/bg_grid_description4"/>-->
+
+    <!--<TextView-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="10dp"-->
+    <!--android:text="不建议出借"-->
+    <!--android:textColor="@color/text_989898"-->
+    <!--android:textSize="13sp"/>-->
+    <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+
+    <!--</ScrollView>-->
+
+    <!--</LinearLayout>-->

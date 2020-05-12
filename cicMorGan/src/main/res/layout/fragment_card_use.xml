@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+    <com.d3rich.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/lv_card_use"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_below="@id/progressBar"
+        android:background="@color/bg_gray"
+        android:divider="@null"
+        android:scrollbars="none">
+    </com.d3rich.pulltorefresh.library.PullToRefreshListView>
+
+
+    <RelativeLayout
+        android:id="@+id/rl_no_card"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_no_award"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/pic_emptypage_3"/>
+
+        <TextView
+            android:id="@+id/tv_no_award_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_no_award"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="26dp"
+            android:text="暂无优惠券，赶紧去领取吧~"
+            android:textColor="@color/text_989898"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+</RelativeLayout>

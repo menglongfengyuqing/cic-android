@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="143dp"
+              android:layout_height="match_parent"
+              android:orientation="vertical"
+              android:paddingLeft="15dp">
+
+    <View
+        android:layout_width="143dp"
+        android:layout_height="1dp"
+        android:background="#D2D2D2"/>
+
+    <RelativeLayout
+        android:layout_width="143dp"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="#D2D2D2"/>
+
+        <ImageView
+            android:id="@+id/img_pic"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/ic_launcher">
+        </ImageView>
+
+        <TextView
+            android:id="@+id/txt_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img_pic"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:ellipsize="end"
+            android:maxLines="2"
+            android:text="头戴式降噪社人士及头戴式降噪社人士及头戴式降噪社人士及"
+            android:textColor="#666666"
+            android:textSize="13sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txt_name"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="10dp"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/pic_find_coin">
+            </ImageView>
+
+            <TextView
+                android:id="@+id/txt_money"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="2dp"
+                android:text="120000"
+                android:textColor="#e5363a"
+                android:textSize="13sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="143dp"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="#D2D2D2"/>
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="#D2D2D2"/>
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,667 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:app="http://schemas.android.com/apk/res-auto"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/il_title"
+        layout="@layout/activity_base"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_below="@id/il_title"
+        android:background="@color/text_cccccc"
+        android:progressDrawable="@drawable/progress_bg"
+        />
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar"
+        android:visibility="gone"
+        >
+
+        <ScrollView
+            android:id="@+id/sl"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            >
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:id="@+id/ll_content"
+                    android:layout_width="fill_parent"
+                    android:layout_height="fill_parent"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_percent_num"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text=""
+                            android:textColor="@color/text_a11c3f"
+                            android:textSize="33sp"
+                            android:textStyle="bold"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="%"
+                            android:textColor="@color/text_a11c3f"
+                            android:textSize="20sp"
+                            android:textStyle="bold"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="14dp"
+                        android:text="年化利率"
+                        android:textColor="#858586"
+                        android:textSize="16sp"/>
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="29dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_remaining_sum"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/text_333333"
+                                android:textSize="16sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="剩余金额（元）"
+                                android:textColor="@color/main_bellow_text_no"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1.5dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/bg_gray"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_project_time"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/text_333333"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="出借期限（天）"
+                                android:textColor="@color/main_bellow_text_no"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+
+                        <View
+                            android:layout_width="1.5dp"
+                            android:layout_height="50dp"
+                            android:layout_gravity="center_vertical"
+                            android:background="@color/bg_gray"/>
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_once_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text=""
+                                android:textColor="@color/text_333333"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="15dp"
+                                android:text="出借最低金额（元）"
+                                android:textColor="@color/main_bellow_text_no"
+                                android:textSize="13sp"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="15dp"
+                        android:background="@color/new_home_bg"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/rl_safe_guarantee"
+                        android:layout_width="fill_parent"
+                        android:layout_height="54dp"
+                        android:visibility="gone"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="15dp"
+                            android:text="安全保障"
+                            android:textColor="@color/text_333333"
+                            android:textSize="16sp"/>
+
+                        <ImageView
+                            android:id="@+id/iv_enter"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="15dp"
+                            android:background="@drawable/enter"/>
+
+                        <TextView
+                            android:id="@+id/tv_safe_company"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginRight="10dp"
+                            android:layout_toLeftOf="@id/iv_enter"
+                            android:text="银行存管与风控管理"
+                            android:textColor="@color/main_bellow_text_no"
+                            android:textSize="14sp"/>
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:background="@color/new_home_bg"
+                        android:visibility="gone"
+                        />
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="54dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:id="@+id/ll_product_introduction"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_product_introduction"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="19dp"
+                                android:text="产品介绍"
+                                android:textColor="@color/text_a11c3f"
+                                android:textSize="15sp"/>
+
+                            <View
+                                android:id="@+id/v_product_introduction_line"
+                                android:layout_width="30dp"
+                                android:layout_height="1.5dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/text_a11c3f"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_lend_record"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_lend_record"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="19dp"
+                                android:text="出借记录"
+                                android:textColor="@color/main_bellow_text_no"
+                                android:textSize="15sp"/>
+
+                            <View
+                                android:id="@+id/v_lend_record_line"
+                                android:layout_width="30dp"
+                                android:layout_height="1.5dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/text_a11c3f"
+                                android:visibility="gone"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/ll_common_problem"
+                            android:layout_width="0dp"
+                            android:layout_height="54dp"
+                            android:layout_weight="1"
+                            android:gravity="center_horizontal"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/tv_common_problem"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="19dp"
+                                android:text="常见问题"
+                                android:textColor="@color/main_bellow_text_no"
+                                android:textSize="15sp"/>
+
+                            <View
+                                android:id="@+id/v_common_problem_line"
+                                android:layout_width="30dp"
+                                android:layout_height="1.5dp"
+                                android:layout_marginTop="10dp"
+                                android:background="@color/text_a11c3f"
+                                android:visibility="gone"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/new_home_bg"/>
+
+                    <LinearLayout
+                        android:id="@+id/ll_product_introduction_content"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <ScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginTop="10dp"
+                                    android:text="项目介绍"
+                                    android:textColor="@color/text_666666"
+                                    android:textSize="16sp"/>
+
+                                <TextView
+                                    android:id="@+id/tv_product_introduction_content"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="15dp"
+                                    android:layout_marginRight="15dp"
+                                    android:layout_marginTop="10dp"
+                                    android:lineSpacingExtra="2dp"
+                                    android:text=""
+                                    android:textColor="#9a9a9a"
+                                    android:textSize="14sp"/>
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:layout_marginTop="15dp"
+                                    android:background="@color/new_home_bg"/>
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_investment_detail_file"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="50dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:text="相关文件"
+                                        android:textColor="@color/text_666666"
+                                        android:textSize="16sp"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="15dp"
+                                        android:background="@drawable/enter"/>
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/new_home_bg"/>
+
+                                <RelativeLayout
+                                    android:id="@+id/rl_payment_plan"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="50dp">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginLeft="15dp"
+                                        android:text="还款计划"
+                                        android:textColor="@color/text_666666"
+                                        android:textSize="16sp"/>
+
+                                    <ImageView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_alignParentRight="true"
+                                        android:layout_centerVertical="true"
+                                        android:layout_marginRight="15dp"
+                                        android:background="@drawable/enter"/>
+                                </RelativeLayout>
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="6dp"
+                                    android:background="@color/new_home_bg"/>
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="80dp"
+                                    android:background="@color/white"/>
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_question_text"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="5dp"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <ScrollView
+                            android:layout_width="fill_parent"
+                            android:layout_height="wrap_content"
+                            android:scrollbars="none">
+
+                            <LinearLayout
+                                android:layout_width="fill_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:id="@+id/tv_question_num_one"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Q1"
+                                        android:textColor="@color/text_a11c3f"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_question_problem_one"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="房产抵押项目安全吗？"
+                                        android:textColor="@color/text_666666"
+                                        android:textSize="16sp"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_question_answer_one"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:lineSpacingExtra="2dp"
+                                    android:text="中投摩根以严谨负责的态度对待每笔借款进行严格筛选，抵押物全部为北京房产，并且为首次足值抵押，支付与海口银行进行合作，保证资金去向透明可追踪，每笔出借信息真实有效。"
+                                    android:textColor="#9a9a9a"
+                                    android:textSize="14sp"/>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="28dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Q2"
+                                        android:textColor="@color/text_a11c3f"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_question_problem_two"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="出借资金的起点是多少？"
+                                        android:textColor="@color/text_666666"
+                                        android:textSize="16sp"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_question_answer_two"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:lineSpacingExtra="2dp"
+                                    android:text="最低1000元出借，100的倍数递增"
+                                    android:textColor="#9a9a9a"
+                                    android:textSize="14sp"/>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="28dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Q3"
+                                        android:textColor="@color/text_a11c3f"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_question_problem_three"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="什么时间开始计算利息？"
+                                        android:textColor="@color/text_666666"
+                                        android:textSize="16sp"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_question_answer_three"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:lineSpacingExtra="2dp"
+                                    android:text="满标日(放款日)开始计息"
+                                    android:textColor="#9a9a9a"
+                                    android:textSize="14sp"/>
+
+                                <LinearLayout
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="28dp"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:text="Q4"
+                                        android:textColor="@color/text_a11c3f"
+                                        android:textSize="16sp"/>
+
+                                    <TextView
+                                        android:id="@+id/tv_question_problem_four"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginLeft="5dp"
+                                        android:text="利息和本金什么时发放？"
+                                        android:textColor="@color/text_666666"
+                                        android:textSize="16sp"/>
+                                </LinearLayout>
+
+                                <TextView
+                                    android:id="@+id/tv_question_answer_four"
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="5dp"
+                                    android:lineSpacingExtra="2dp"
+                                    android:text="项目会按照还款计划的时间，每月付息，到期退还本金；付息日期如赶上周末或节假日，顺延至下一个工作日。"
+                                    android:textColor="#9a9a9a"
+                                    android:textSize="14sp"/>
+
+                                <View
+                                    android:layout_width="fill_parent"
+                                    android:layout_height="70dp"
+                                    android:background="@color/white"/>
+                            </LinearLayout>
+                        </ScrollView>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/lend_list"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:orientation="vertical"
+                        android:visibility="gone">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="40dp"
+                            android:background="@color/new_home_bg"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="出借人"
+                                android:textColor="@color/investment_list_head_text"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="出借金额"
+                                android:textColor="@color/investment_list_head_text"
+                                android:textSize="15sp"/>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:gravity="center"
+                                android:text="出借时间"
+                                android:textColor="@color/investment_list_head_text"
+                                android:textSize="15sp"/>
+                        </LinearLayout>
+
+                        <com.ztmg.cicmorgan.activity.ExpandListView
+                            android:id="@+id/lv_investment_detail_list"
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:layout_marginBottom="50dp"
+                            android:background="@color/white"
+                            android:divider="@null"
+                            android:scrollbars="none"
+                            >
+                        </com.ztmg.cicmorgan.activity.ExpandListView>
+                    </LinearLayout>
+                </LinearLayout>
+            </RelativeLayout>
+        </ScrollView>
+        <!-- </ScrollView> -->
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+            <Button
+                android:id="@+id/bt_once_investment"
+                android:layout_width="fill_parent"
+                android:layout_height="36dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/text_a11c3f"
+                android:text="立即出借"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_above="@id/bt_once_investment"
+                android:layout_marginBottom="5dp"
+                android:gravity="center_horizontal"
+                android:text="*市场有风险，出借需谨慎"
+                android:textColor="#c7c7c7"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_transparent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_draw_win">
+
+        <TextView
+            android:id="@+id/tv_hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="16dp"
+            android:text="恭喜您获得以下奖品"
+            android:textColor="@color/white"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:padding="15dp"
+            android:src="@drawable/pic_draw_close"/>
+
+        <ImageView
+            android:layout_width="92dp"
+            android:layout_height="92dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/bg_white_circle"/>
+
+        <ImageView
+            android:id="@+id/iv_draw_img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:scaleType="fitXY"
+            />
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="73dp"
+            android:layout_height="25dp"
+            android:layout_below="@id/iv_draw_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/bt_green"
+            android:text="确定"
+            android:textColor="@color/white"
+            android:textSize="14sp"
+            />
+        <!-- <TextView
+                    android:id="@+id/tv_draw_win"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="135dp"
+                    android:text="恭喜您抽中15元抵用券"
+                    android:textColor="@color/red2"
+                    android:textSize="15sp"
+                    android:visibility="gone"
+                     />
+                 <LinearLayout
+                    android:id="@+id/ll_check_prize"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_draw_win"
+                    android:layout_centerHorizontal="true"
+                    android:orientation="horizontal"
+                    android:visibility="gone"
+                    >
+
+                    <TextView
+                        android:id="@+id/tv_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:layout_marginTop="20dp"
+                        android:text="查看奖品"
+                        android:textColor="#812122"
+                        android:textSize="13sp" />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                         android:layout_marginTop="17dp"
+                        android:layout_marginLeft="5dp"
+                        android:background="@drawable/pic_draw_win_right" />
+                </LinearLayout>  -->
+
+    </RelativeLayout>
+
+</RelativeLayout>

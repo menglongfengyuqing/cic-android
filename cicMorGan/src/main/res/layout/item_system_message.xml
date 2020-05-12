@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp" >
+
+        <TextView
+            android:id="@+id/tv_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:lineSpacingExtra="2dp"
+            android:text="333"
+            android:textColor="#797979"
+            android:textSize="15sp" />
+
+        <TextView
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_below="@id/tv_content"
+            android:layout_marginTop="13dp"
+            android:background="@drawable/bt_white"
+            android:gravity="center"
+            android:text="系统消息"
+            android:textColor="@color/register_text_color"
+            android:textSize="13sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_content"
+            android:layout_marginTop="13dp"
+            android:text="2017-07-07 15:09:09"
+            android:textColor="@color/register_text_color"
+            android:textSize="13sp" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_marginTop="15dp"
+        android:background="#E5E5E5" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:paddingTop="20dp"
+        android:text="*市场有风险，出借需谨慎"
+        android:textColor="#c7c7c7"
+        android:textSize="12sp" />
+
+</LinearLayout>

@@ -1,0 +1,20 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="commonAppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/common_colorPrimary</item>
+        <item name="colorPrimaryDark">@color/common_colorPrimaryDark</item>
+        <item name="colorAccent">@color/common_colorAccent</item>
+        <!--Android版本到4.4才会有个属性，第一个属性很明显就是可以拉升到顶部状态栏，
+        并且定义顶部状态栏透明，这样你的页面就是一整张了，没有上面电池背景条之类的了，整个页面看上去会好很多，-->
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowTranslucentNavigation">true</item>
+        <!--Android 5.x开始需要把颜色设置透明，否则导航栏会呈现系统默认的浅灰色-->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <!--去除系统的ActionBar，带android的是系统的，不带android是兼容样式的，就是Theme.AppCompat样式的 -->
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+</resources>

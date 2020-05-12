@@ -1,0 +1,338 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@drawable/bg_transparent"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        >
+
+        <RelativeLayout
+            android:id="@+id/rl_write_bg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:background="@drawable/img_newuserpopbg">
+
+            <TextView
+                android:id="@+id/tv_register_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="30dp"
+                android:text="注册账号"
+                android:textColor="@color/text_34393c"
+                android:textSize="21sp"
+                />
+
+            <TextView
+                android:id="@+id/tv_register_content"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_register_text"
+                android:layout_centerHorizontal="true"
+                android:layout_marginLeft="32dp"
+                android:layout_marginRight="32dp"
+                android:layout_marginTop="20dp"
+                android:lineSpacingExtra="10dp"
+                android:text="欢迎来到中投摩根，用您的手机号注册中投摩根个人账号，领取600元红包，开启您的财富之旅！"
+                android:textColor="@color/text_34393c"
+                android:textSize="15sp"
+                />
+
+            <Button
+                android:id="@+id/bt_execution"
+                android:layout_width="255dp"
+                android:layout_height="36dp"
+                android:layout_below="@id/tv_register_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/bt_red"
+                android:text="前往注册"
+                android:textColor="@color/white"
+                android:textSize="18sp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="67dp"
+                android:layout_below="@id/bt_execution"
+                android:layout_marginTop="22dp"
+                android:background="@drawable/new_hand_guide_bg"
+                >
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_write_triangle_first"
+                        android:layout_width="16dp"
+                        android:layout_height="7dp"
+                        android:background="@drawable/icon_triangle"
+                        android:visibility="invisible"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_finish_frist"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/icon_newuser_done"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="来到"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="10sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="中投摩根"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="10sp"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:alpha="0.1"
+                        android:background="@color/text_f3f3f3"
+                        ></View>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_triangle_second"
+                        android:layout_width="16dp"
+                        android:layout_height="7dp"
+                        android:background="@drawable/icon_triangle"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_finish_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/icon_newuser_inprocess"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="注册"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="10sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="账号"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="10sp"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:alpha="0.1"
+                        android:background="@color/text_f3f3f3"
+                        ></View>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_triangle_third"
+                        android:layout_width="16dp"
+                        android:layout_height="7dp"
+                        android:background="@drawable/icon_triangle"
+                        android:visibility="invisible"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_finish_third"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/icon_newuser_undo"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_bank_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="开通"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_tv_bank_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="银行存管"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="10sp"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:alpha="0.1"
+                        android:background="@color/text_f3f3f3"
+                        ></View>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_triangle_fourth"
+                        android:layout_width="16dp"
+                        android:layout_height="7dp"
+                        android:background="@drawable/icon_triangle"
+                        android:visibility="invisible"
+                        />
+
+                    <ImageView
+                        android:id="@+id/tv_finish_fourth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/icon_newuser_undo"/>
+
+                    <TextView
+                        android:id="@+id/tv_test_first"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="风险"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="10sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_test_second"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="测评"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="10sp"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:alpha="0.1"
+                        android:background="@color/text_f3f3f3"
+                        ></View>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    >
+
+                    <ImageView
+                        android:id="@+id/iv_triangle_fifth"
+                        android:layout_width="16dp"
+                        android:layout_height="7dp"
+                        android:background="@drawable/icon_triangle"
+                        android:visibility="invisible"
+                        />
+
+                    <ImageView
+                        android:id="@+id/iv_finish_fifth"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="3dp"
+                        android:background="@drawable/icon_newuser_undo"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:text="查看"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="10sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="产品"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="10sp"
+                        />
+
+                    <View
+                        android:layout_width="wrap_content"
+                        android:layout_height="10dp"
+                        android:alpha="0.1"
+                        android:background="@color/text_f3f3f3"
+                        ></View>
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <View
+            android:id="@+id/v_close_line"
+            android:layout_width="1dp"
+            android:layout_height="49dp"
+            android:layout_below="@id/rl_write_bg"
+            android:layout_centerHorizontal="true"
+            android:background="#989898"
+            ></View>
+
+        <ImageView
+            android:id="@+id/iv_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/v_close_line"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_pop_newuser_close"
+            />
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="320dp"
+              android:layout_height="175dp"
+              android:background="@drawable/bg_integral_rule"
+              android:gravity="center"
+              android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/text_manner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lineSpacingExtra="10dp"
+        android:text="计算方式为：\n借款金额为X，年利率为Y，借款期限为Z月,
+则每月应还利息计算公式为：X×Y/12，
+应还总利息计算公式为：X×Y/12×Z，
+应还本金为X。"
+        android:textColor="@color/text_34393c"
+        android:textSize="15sp"/>
+
+
+</LinearLayout>

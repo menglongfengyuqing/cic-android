@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+     <include
+         android:id="@+id/il_home_title"
+          layout="@layout/activity_base" />
+     <View 
+         android:id="@+id/v_home_bg"
+         android:layout_width="fill_parent"
+         android:layout_height="40dp"
+         android:background="@color/blue"
+         android:visibility="gone"
+         />
+     <WebView 
+        android:id="@+id/wv_home_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+     
+
+</LinearLayout>

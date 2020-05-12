@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:zhusp="http://schemas.android.com/apk/res-auto"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                >
+
+                <com.ztmg.cicmorgan.view.CircleScaleView
+                    android:id="@+id/cs_my_scale"
+                    android:layout_width="270dp"
+                    android:layout_height="270dp"
+                    zhusp:circleWidth="15dp"
+                    zhusp:communicateCostColor="#ff0000"
+                    zhusp:entertainmentCostColor="#00cbbb"
+                    zhusp:lifeCostColor="#ffb312"
+                    zhusp:radius="140dp"
+                    zhusp:trafficCostColor="#00aeef">
+                </com.ztmg.cicmorgan.view.CircleScaleView>
+
+                <ImageView
+                    android:id="@+id/iv_account_no_money"
+                    android:layout_width="260dp"
+                    android:layout_height="260dp"
+                    android:background="@drawable/pic_account_no_money"
+                    android:visibility="gone"
+                    />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:orientation="vertical"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:text="资产总额（元）"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_account_sum"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="15dp"
+                        android:text="0.00"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="30sp"
+                        />
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="40dp"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="31dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/v_available_money"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#ffb312"
+                        ></View>
+
+                    <TextView
+                        android:id="@+id/tv_available_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/v_available_money"
+                        android:text="可用余额（元）"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_available_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_available_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/v_available_money"
+                        android:text="0.00"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/v_frozen_money"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#ff0000"
+                        ></View>
+
+                    <TextView
+                        android:id="@+id/tv_frozen_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/v_frozen_money"
+                        android:text="冻结金额（元）"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_freeze_amount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_frozen_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/v_frozen_money"
+                        android:text="0.00"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="46dp"
+                android:orientation="horizontal"
+                >
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="31dp"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/v_collection_money"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#00cbbb"
+                        ></View>
+
+                    <TextView
+                        android:id="@+id/tv_collection_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/v_collection_money"
+                        android:text="待收本金（元）"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_regular_due_principal"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_collection_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/v_collection_money"
+                        android:text="0.00"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"
+                        />
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <View
+                        android:id="@+id/v_profit_money"
+                        android:layout_width="15dp"
+                        android:layout_height="15dp"
+                        android:layout_marginTop="2dp"
+                        android:background="#00aeef"
+                        ></View>
+
+                    <TextView
+                        android:id="@+id/tv_profit_text"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/v_profit_money"
+                        android:text="待收利息（元）"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_regular_due_interest"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/tv_profit_text"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_toRightOf="@id/v_profit_money"
+                        android:text="0.00"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"
+                        />
+                </RelativeLayout>
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginTop="23dp"
+                android:background="@color/text_f2f2f2"
+                ></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="累计出借（元）"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_regular_total_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0.00"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/text_cccccc"
+                ></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="累计利息（元）"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_regular_total_interest"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0.00"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/text_cccccc"
+                ></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="累计提现（元）"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_cash_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0.00"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/text_cccccc"
+                ></View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="61dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                >
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="累计充值（元）"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_recharge_amount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="0.00"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"
+                    />
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

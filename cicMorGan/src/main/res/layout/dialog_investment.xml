@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="320dp"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_write_upgrade"
+    android:layout_gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="出借中"
+        android:textColor="@color/text_34393c"
+        android:textSize="21sp" />
+
+    <TextView
+        android:id="@+id/tv_new_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="正在跳转存管银行，请耐心等待..."
+        android:textColor="@color/text_34393c"
+        android:textSize="15sp" />
+
+
+</LinearLayout>

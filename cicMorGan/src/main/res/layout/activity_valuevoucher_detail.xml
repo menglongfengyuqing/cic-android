@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <TextView
+            android:id="@+id/tv_value_voucher_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="26dp"
+            android:text="1111"
+            android:textColor="@color/text_333333"
+            android:textSize="28sp"/>
+
+        <TextView
+            android:id="@+id/tv_card_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="26dp"
+            android:layout_toRightOf="@id/tv_value_voucher_money"
+            android:text="现金券"
+            android:textColor="@color/text_333333"
+            android:textSize="28sp"/>
+
+        <TextView
+            android:id="@+id/tv_from_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_value_voucher_money"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="15dp"
+            android:text="来源："
+            android:textColor="#c4c4c4"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_from"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_value_voucher_money"
+            android:layout_marginTop="15dp"
+            android:layout_toRightOf="@id/tv_from_text"
+            android:text="新手注册奖励"
+            android:textColor="#c4c4c4"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_start_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_from_text"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:text="起始时间："
+            android:textColor="#c4c4c4"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_tv_start_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_from_text"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/tv_start_time_text"
+            android:text="2016-01-02"
+            android:textColor="#c4c4c4"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_end_time_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_start_time_text"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="13dp"
+            android:text="截止时间："
+            android:textColor="#c4c4c4"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_end_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_start_time_text"
+            android:layout_marginTop="13dp"
+            android:layout_toRightOf="@id/tv_end_time_text"
+            android:text="2016-01-02"
+            android:textColor="#c4c4c4"
+            android:textSize="15sp"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="4dp"
+            android:layout_below="@id/tv_end_time_text"
+            android:layout_marginTop="18dp"
+            android:background="@color/new_home_bg"/>
+    </RelativeLayout>
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:text="11111111111111"
+        android:textColor="#c4c4c4"
+        android:textSize="14sp"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/bt_no_activation"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="#C7C6C6"
+            android:text="未激活"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <Button
+            android:id="@+id/bt_yes_activation"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/blue"
+            android:text="已激活"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

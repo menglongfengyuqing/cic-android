@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/new_home_bg"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp">
+
+        <TextView
+            android:id="@+id/tv_payment_state"
+            android:layout_width="69dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/bg_ellipse_blue"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tv_payment_state"
+            android:text=""
+            android:textColor="#b3b0b1"
+            android:textSize="14dp"/>
+
+        <TextView
+            android:id="@+id/tv_investment_detail_payment_type"
+            android:layout_width="48dp"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:gravity="center"
+            android:text=""
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_toLeftOf="@id/tv_investment_detail_payment_type"
+            android:text=""
+            android:textColor="#3f3f3f"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+</LinearLayout>

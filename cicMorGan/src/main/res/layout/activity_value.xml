@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@color/black" >
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="70dp"
+            android:layout_height="44dp" >
+
+            <ImageView
+                android:id="@+id/iv_left_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="28dp"
+                android:background="@drawable/back"
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:orientation="vertical" 
+            android:layout_centerVertical="true"
+            >
+
+        <RadioGroup
+            android:id="@+id/rg_main"
+            android:layout_width="match_parent"
+            android:layout_height="43dip"
+            android:background="@color/black"
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/rb_serve_card"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0dip"
+                android:text="抵用券"
+                 android:textColor="@color/white"
+                    android:textSize="20sp"  />
+
+            <View
+                android:layout_width="1dip"
+                android:layout_height="25dip"
+                android:layout_gravity="center_vertical"
+                android:background="#415062"
+                android:padding="5dip" />
+
+            <RadioButton
+                android:id="@+id/rb_raising_rates_card"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:button="@null"
+                android:gravity="center"
+                android:padding="0dip"
+                android:text="加息券"
+                  android:textColor="@color/white"
+                    android:textSize="20sp"  />
+        </RadioGroup>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:background="@color/black"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/linebc1"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/linebc2"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:visibility="invisible" />
+        </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+<FrameLayout
+            android:id="@+id/fl_card"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent" >
+        </FrameLayout>
+</LinearLayout>

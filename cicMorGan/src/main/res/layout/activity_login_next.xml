@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/bg_gray"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="21dp"
+            android:src="@drawable/icon"/>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="26dp"
+            android:background="@drawable/edit">
+
+            <TextView
+                android:id="@+id/tv_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="@string/phone"
+                android:textColor="@color/phone_color"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toRightOf="@id/tv_text"
+                android:gravity="center_vertical"
+                android:text=""
+                android:textColor="@color/text"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="38dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/edit">
+
+            <TextView
+                android:id="@+id/tv_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="8dp"
+                android:text="密码："
+                android:textColor="@color/phone_color"
+                android:textSize="15sp"/>
+
+            <EditText
+                android:id="@+id/et_password"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_marginLeft="3dp"
+                android:layout_toLeftOf="@+id/iv_eyes_no"
+                android:layout_toRightOf="@id/tv_password"
+                android:background="@null"
+                android:hint="@string/password_text"
+                android:imeOptions="actionDone"
+                android:password="true"
+                android:singleLine="true"
+                android:textColorHint="@color/text"
+                android:textSize="15sp"
+                />
+
+            <Button
+                android:id="@+id/iv_eyes_no"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="8dp"
+                android:background="@drawable/pic_pas"
+                android:padding="10dp"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_forget_password"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="15dp"
+                android:text="忘记密码"
+                android:textColor="@color/black"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+
+        <Button
+            android:id="@+id/bt_login"
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_marginLeft="62dp"
+            android:layout_marginRight="62dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bg_button"
+            android:text="@string/login"
+            android:textColor="@color/textColorWhite"
+            android:textSize="21sp"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <TextView
+                android:id="@+id/tv_tip"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:gravity="center_horizontal"
+                android:text="*市场有风险，出借需谨慎"
+                android:textColor="#c7c7c7"
+                android:textSize="12sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

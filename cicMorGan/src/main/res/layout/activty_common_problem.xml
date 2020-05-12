@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="23dp">
+
+                <TextView
+                    android:id="@+id/tv_problem_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Q1"
+                    android:textColor="@color/text_a11c3f"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_problem_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="供应链金融项目安全么？"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_problem_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_problem_title"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="扶持优质资产端，锁定核心企业供应链，为企业提供应收/应付账款管理和信用输出、批量为核心企业上下游提供供应链金融综合解决方案，核心企业信用背书项目贸易真实透明并按时回款。"
+                    android:textColor="@color/text_989898"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="23dp"
+                android:background="@color/text_f5f5f5">
+
+            </View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="23dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Q2"
+                    android:textColor="@color/text_a11c3f"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_problem_title2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="出借资金的起点是多少？"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_problem_title2"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="最低1000元出借，100的倍数递增"
+                    android:textColor="@color/text_989898"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="23dp"
+                android:background="@color/text_f5f5f5">
+
+            </View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="23dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Q3"
+                    android:textColor="@color/text_a11c3f"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_problem_title3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="什么时间开始计算利息？"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_problem_title3"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="满标日(放款日)开始计息"
+                    android:textColor="@color/text_989898"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="23dp"
+                android:background="@color/text_f5f5f5">
+
+            </View>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="23dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Q4"
+                    android:textColor="@color/text_a11c3f"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_problem_title4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="50dp"
+                    android:text="利息和本金什么时发放？"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/tv_problem_title4"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginLeft="50dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="20dp"
+                    android:lineSpacingExtra="5dp"
+                    android:text="项目会按照还款计划的时间，每月付息，到期退还本金；付息日期如赶上周末或节假日，顺延至下一个工作日。"
+                    android:textColor="@color/text_989898"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

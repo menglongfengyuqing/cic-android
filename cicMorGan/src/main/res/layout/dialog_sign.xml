@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_transparent" >
+
+    <ImageView
+        android:layout_width="280dp"
+        android:layout_height="190dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/bg_write_upgrade" />
+
+    <ImageView
+        android:id="@+id/iv_sign_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="123dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/img_registersuccess"
+        />
+    <LinearLayout
+        android:id="@+id/ll_integral"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_sign_state"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="25dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tv_sign_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="恭喜您获得"
+            android:textColor="@color/text_34393c"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1"
+            android:textColor="#fdbf15"
+            android:textSize="17sp"
+            />
+
+        <TextView
+            android:id="@+id/tv_sign_total_integral"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="个积分"
+            android:textColor="@color/text_34393c"
+            android:textSize="17sp"
+            />
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/ll_days"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/ll_integral"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:id="@+id/tv_sign_day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="累计签到"
+            android:textColor="@color/text_34393c"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_sign_days"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7"
+            android:textColor="#fdbf15"
+            android:textSize="17sp" />
+
+        <TextView
+            android:id="@+id/tv_day_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="天"
+            android:textColor="@color/text_34393c"
+            android:textSize="17sp" />
+    </LinearLayout>
+    <View
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/ll_days"></View>
+
+</RelativeLayout>

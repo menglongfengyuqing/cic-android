@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/text_cccccc"
+        android:progressDrawable="@drawable/progress_bg"/>
+
+    <com.ztmg.cicmorgan.view.MyScrollViewScroll
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+
+        <LinearLayout
+            android:id="@+id/ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/pic_integral_title_bg"
+                    android:visibility="gone"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="77dp">
+
+                    <RelativeLayout
+                        android:id="@+id/ll_integral"
+                        android:layout_width="0dp"
+                        android:layout_height="77dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_integral_score"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_mall_lottery"/>
+
+                        <TextView
+                            android:id="@+id/tv_integral_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/iv_integral_score"
+                            android:text="积分抽奖"
+                            android:textColor="@color/text_34393c"
+                            android:textSize="17sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_integral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_integral_text"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv_integral_score"
+                            android:text=""
+                            android:textColor="@color/text_989898"
+                            android:textSize="11sp"/>
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/ll_exchange_record"
+                        android:layout_width="0dp"
+                        android:layout_height="77dp"
+                        android:layout_weight="1"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:id="@+id/iv_integral_record"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_mall_records"/>
+
+                        <TextView
+                            android:id="@+id/tv_integral_record"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:layout_toRightOf="@id/iv_integral_record"
+                            android:text="我的奖品"
+                            android:textColor="@color/text_34393c"
+                            android:textSize="17sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/tv_integral_record"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@id/iv_integral_record"
+                            android:text="1111"
+                            android:textColor="@color/text_989898"
+                            android:textSize="11sp"
+                            android:visibility="invisible"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:layout_marginLeft="0dp"
+                android:layout_marginRight="0dp"
+                android:background="@color/text_f2f2f2"/>
+
+            <com.d3rich.pulltorefresh.library.PullToRefreshGridView
+                android:id="@+id/lv_new_goods_list"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:divider="@null"
+                android:horizontalSpacing="14dp"
+                android:numColumns="2"
+                android:scrollbars="none"
+                android:verticalSpacing="15dp">
+            </com.d3rich.pulltorefresh.library.PullToRefreshGridView>
+        </LinearLayout>
+    </com.ztmg.cicmorgan.view.MyScrollViewScroll>
+</LinearLayout>

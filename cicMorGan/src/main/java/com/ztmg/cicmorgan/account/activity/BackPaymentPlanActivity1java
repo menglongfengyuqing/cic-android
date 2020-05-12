@@ -1,0 +1,362 @@
+//package com.ztmg.cicmorgan.account.activity;
+//
+//import android.content.Intent;
+//import android.os.Build;
+//import android.os.Bundle;
+//import android.view.View;
+//import android.view.View.OnClickListener;
+//import android.widget.TextView;
+//import android.widget.Toast;
+//
+//import com.loopj.android.http.AsyncHttpClient;
+//import com.loopj.android.http.AsyncHttpResponseHandler;
+//import com.loopj.android.http.RequestParams;
+//import com.ztmg.cicmorgan.R;
+//import com.ztmg.cicmorgan.activity.UnlockGesturePasswordActivity;
+//import com.ztmg.cicmorgan.base.BaseActivity;
+//import com.ztmg.cicmorgan.calendar.CollapseCalendarView;
+//import com.ztmg.cicmorgan.calendar.CollapseCalendarView.OnDateSelect;
+//import com.ztmg.cicmorgan.calendar.manager.CalendarManager;
+//import com.ztmg.cicmorgan.calendar.manager.CalendarManager.OnMonthChangeListener;
+//import com.ztmg.cicmorgan.calendar.models.BeanDate;
+//import com.ztmg.cicmorgan.calendar.utils.AndroidUtils;
+//import com.ztmg.cicmorgan.investment.activity.AgreementActivity;
+//import com.ztmg.cicmorgan.login.LoginActivity;
+//import com.ztmg.cicmorgan.net.Urls;
+//import com.ztmg.cicmorgan.util.DoCacheUtil;
+//import com.ztmg.cicmorgan.util.LoginUserProvider;
+//import com.ztmg.cicmorgan.util.SystemBarTintManager;
+//
+//import org.apache.http.Header;
+//import org.joda.time.LocalDate;
+//import org.json.JSONArray;
+//import org.json.JSONException;
+//import org.json.JSONObject;
+//
+//import java.io.IOException;
+//import java.io.InputStream;
+//import java.math.BigDecimal;
+//import java.text.SimpleDateFormat;
+//import java.util.ArrayList;
+//import java.util.Calendar;
+//import java.util.List;
+//
+///**
+// * 回款计划
+// *
+// * @author pc
+// */
+//public class BackPaymentPlanActivity extends BaseActivity {
+//    private String token;
+//    //private List<BackPaymentPlanEntity> paymentPlanList;
+//    private BeanDate entity;
+//    private CollapseCalendarView calendarView;
+//    private CalendarManager mManager;
+//    private JSONObject json;
+//    private SimpleDateFormat sdf;
+//    private boolean show = false;
+//    private List<BeanDate> paymentList;
+//    private List<String> dateList;
+//    private TextView tv_day_payment, tv_month_payment;
+//    private List<String> firthMonth;
+//
+//    @Override
+//    protected void onCreate(Bundle savedInstanceState) {
+//        super.onCreate(savedInstanceState);
+//        super.setContentView(R.layout.activity_back_payment_plan);
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.KITKAT) {
+//            setTranslucentStatus(true);
+//            SystemBarTintManager tintManager = new SystemBarTintManager(BackPaymentPlanActivity.this);
+//            tintManager.setStatusBarTintEnabled(true);
+//            tintManager.setStatusBarTintResource(R.color.text_cccccc);//通知栏所需颜色
+//        }
+//        dateList = new ArrayList<String>();
+//        sdf = new SimpleDateFormat("yyyy-MM-dd");
+//        calendarView = (CollapseCalendarView) findViewById(R.id.calendar);
+//        tv_day_payment = (TextView) findViewById(R.id.tv_day_payment);
+//        tv_month_payment = (TextView) findViewById(R.id.tv_month_payment);
+//        initView();
+//        //				getDate();
+//        //		if(LoginUserProvider.getUser(BackPaymentPlanActivity.this)!=null){
+//        //			token = LoginUserProvider.getUser(BackPaymentPlanActivity.this).getToken();
+//        //			getBackPaymentPlan(token,"3");
+//        //		}
+//        Intent intent = getIntent();
+//        paymentList = (List<BeanDate>) intent.getSerializableExtra("paymentlist");
+//        calendarView.setPaymentList(paymentList);
+//        if (paymentList.size() > 0) {
+//            for (BeanDate bean : paymentList) {
+//                dateList.add(bean.getDate());
+//            }
+//        }
+//
+//        initData();
+//    }
+//
+//    @Override
+//    protected void initView() {
+//        setTitle("回款计划");
+//        setBack(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                finish();
+//            }
+//        });
+//        findViewById(R.id.tv_tips).setOnClickListener(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                Intent riskTipFirstIntent = new Intent(BackPaymentPlanActivity.this, AgreementActivity.class);
+//                riskTipFirstIntent.putExtra("path", Urls.ZTPROTOCOLRISK);
+//                riskTipFirstIntent.putExtra("title", "风险提示书");
+//                startActivity(riskTipFirstIntent);
+//            }
+//        });
+//    }
+//
+//    @Override
+//    protected void initData() {
+//        mManager = new CalendarManager(LocalDate.now(),
+//                CalendarManager.State.MONTH, LocalDate.now().withYear(100),
+//                LocalDate.now().plusYears(100));
+//        //月份切换监听器
+//        mManager.setMonthChangeListener(new OnMonthChangeListener() {
+//
+//            @Override
+//            public void monthChange(String month, LocalDate mSelected) {
+//                // TODO Auto-generated method stub
+//                firthMonth = new ArrayList<String>();
+//                month = month.substring(0, month.length() - 1).replace(" ", "");
+//                int monthLenth = month.length();
+//                double sumMoney = 0.00;
+//                if (monthLenth == 6) {
+//                    month = month.replaceAll("年", "-0");
+//                } else if (monthLenth == 7) {
+//                    month = month.replaceAll("年", "-");
+//                }
+//                if (paymentList.size() > 0) {
+//                    for (int i = 0; i < paymentList.size(); i++) {
+//                        String dateStr = paymentList.get(i).getDate();
+//                        String monthStr = dateStr.substring(0, 7);
+//                        if (month.equals(monthStr)) {//一月份
+//                            firthMonth.add(paymentList.get(i).getMoney());
+//                        }
+//                    }
+//                    if (firthMonth.size() > 0) {
+//                        for (int j = 0; j < firthMonth.size(); j++) {
+//                            double money = Double.parseDouble(firthMonth.get(j));
+//                            sumMoney += money;
+//                        }
+//                        BigDecimal bd = new BigDecimal(sumMoney);
+//                        sumMoney = bd.setScale(2, BigDecimal.ROUND_HALF_UP).doubleValue();
+//                        tv_month_payment.setText(sumMoney + "");
+//                    } else {
+//                        tv_month_payment.setText("0.00");
+//                    }
+//                }
+//            }
+//
+//        });
+//        /**
+//         * 日期选中监听器
+//         */
+//        calendarView.setDateSelectListener(new OnDateSelect() {
+//
+//                                               @Override
+//                                               public void onDateSelected(LocalDate date) {
+//                                                   // TODO Auto-generated method stub
+//                                                   if (paymentList.size() > 0) {
+//                                                       for (BeanDate bean : paymentList) {
+//                                                           if (dateList.contains(date.toString())) {
+//                                                               for (BeanDate beanDate : paymentList) {
+//                                                                   if (beanDate.getDate().equals(date.toString())) {
+//                                                                       tv_day_payment.setText(beanDate.getMoney());
+//                                                                       //								Toast.makeText(MainActivity.this, date.toString()+"::::"+beanDate.getMoney(), Toast.LENGTH_SHORT).show();
+//                                                                       return;
+//                                                                   }
+//                                                               }
+//
+//                                                           } else {
+//                                                               tv_day_payment.setText("0.00");
+//                                                               //					Toast.makeText(MainActivity.this, date.toString()+"::::0.00", Toast.LENGTH_SHORT).show();
+//                                                           }
+//                                                       }
+//                                                   }
+//
+//                                               }
+//                                           }
+//        );
+//        //		calendarView.setTitleClickListener(new OnTitleClickListener() {
+//        //
+//        //			@Override
+//        //			public void onTitleClick() {
+//        //				// TODO Auto-generated method stub
+//        //				Toast.makeText(MainActivity.this, "点击标题", Toast.LENGTH_SHORT).show();
+//        //			}
+//        //		});
+//        //回到今天
+//        findViewById(R.id.btn_today).setOnClickListener(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//                calendarView.changeDate(LocalDate.now().toString());
+//            }
+//        });
+//        //周月切换
+//        findViewById(R.id.btn_changemode).setOnClickListener(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//                mManager.toggleView();
+//                calendarView.populateLayout();
+//            }
+//        });
+//        //显示或者隐藏农历
+//        findViewById(R.id.btn_hide).setOnClickListener(new OnClickListener() {
+//
+//            @Override
+//            public void onClick(View v) {
+//                // TODO Auto-generated method stub
+//                calendarView.showChinaDay(show);
+//                show = !show;
+//            }
+//        });
+//        Calendar cal = Calendar.getInstance();
+//        cal.set(Calendar.MONTH, 9);
+//        cal.set(Calendar.DAY_OF_MONTH, 0);
+//        json = new JSONObject();
+//        try {
+//            for (int i = 0; i < 30; i++) {
+//                JSONObject jsonObject2 = new JSONObject();
+//                if (i <= 6) {
+//                    jsonObject2.put("type", "休");
+//                } else if (i > 6 && i < 11) {
+//                    jsonObject2.put("type", "班");
+//                }
+//                if (i % 3 == 0) {
+//                    jsonObject2.put("list", new JSONArray());
+//                }
+//
+//                json.put(sdf.format(cal.getTime()), jsonObject2);
+//
+//                cal.add(Calendar.DAY_OF_MONTH, 1);
+//            }
+//        } catch (Exception e) {
+//            // TODO: handle exception
+//            e.printStackTrace();
+//        }
+//        //设置数据显示
+//        calendarView.setArrayData(json);
+//        //初始化日历管理器
+//        calendarView.init(mManager);
+//    }
+//
+//    //回款计划
+//    private void getBackPaymentPlan(String token, String from) {
+//        AsyncHttpClient client = new AsyncHttpClient(true, 80, 443);
+//        //		AsyncHttpClient client = new AsyncHttpClient();
+//        //		client.setSSLSocketFactory(SSLSocketFactory.getSocketFactory(BackPaymentPlanActivity.this));
+//        String url = Urls.GETNEWUSERINTERESTCOUNT;
+//        RequestParams params = new RequestParams();
+//        params.put("token", token);
+//        params.put("from", from);
+//        client.post(url, params, new AsyncHttpResponseHandler() {
+//
+//            @Override
+//            public void onSuccess(int statusCode, Header[] headers,
+//                                  byte[] responseBody) {
+//                String result = new String(responseBody);
+//                try {
+//                    JSONObject jsonObject = new JSONObject(result);
+//                    if (jsonObject.getString("state").equals("0")) {
+//                        JSONArray dataArray = jsonObject.getJSONArray("data");
+//                        paymentList = new ArrayList<BeanDate>();
+//                        if (dataArray.length() > 0) {
+//                            for (int i = 0; i < dataArray.length(); i++) {
+//                                JSONArray array = dataArray.getJSONArray(i);
+//                                entity = new BeanDate();
+//                                entity.setDate(array.getString(0));
+//                                entity.setMoney(array.getString(1));
+//                                paymentList.add(entity);
+//                            }
+//                            calendarView.setPaymentList(paymentList);
+//                        }
+//                    } else if (jsonObject.getString("state").equals("4")) {//系统超时
+//                        String mGesture = LoginUserProvider.getUser(BackPaymentPlanActivity.this).getGesturePwd();
+//                        if (mGesture.equals("1") && !mGesture.equals("") && mGesture != null) {// 判断是否设置手势密码
+//                            //设置手势密码
+//                            Intent intent = new Intent(BackPaymentPlanActivity.this, UnlockGesturePasswordActivity.class);
+//                            intent.putExtra("overtime", "0");
+//                            startActivity(intent);
+//                        } else {
+//                            //未设置手势密码
+//                            Intent intent = new Intent(BackPaymentPlanActivity.this, LoginActivity.class);
+//                            intent.putExtra("overtime", "0");
+//                            startActivity(intent);
+//                        }
+//                        //						LoginUserProvider.cleanData(getActivity());
+//                        //						LoginUserProvider.cleanDetailData(getActivity());
+//                        DoCacheUtil util = DoCacheUtil.get(BackPaymentPlanActivity.this);
+//                        util.put("isLogin", "");
+//
+//                    } else {
+//                        Toast.makeText(BackPaymentPlanActivity.this, jsonObject.getString("message"), 0).show();
+//                    }
+//
+//                } catch (JSONException e) {
+//                    e.printStackTrace();
+//                    Toast.makeText(BackPaymentPlanActivity.this, "解析异常", 0).show();
+//                }
+//                if (paymentList.size() > 0) {
+//                    for (BeanDate bean : paymentList) {
+//                        dateList.add(bean.getDate());
+//                    }
+//                }
+//            }
+//
+//            @Override
+//            public void onFailure(int statusCode, org.apache.http.Header[] headers, byte[] responseBody,
+//                                  Throwable error) {
+//                Toast.makeText(BackPaymentPlanActivity.this, "请检查网络", 0).show();
+//            }
+//        });
+//    }
+//
+//    private void getDate() {
+//        try {
+//            InputStream st = getAssets().open("date.txt");
+//            String s = AndroidUtils.stream2String(st);
+//            try {
+//                JSONObject object = new JSONObject(s);
+//                if (object.getString("state").equals("0")) {
+//                    JSONArray dataArray = object.getJSONArray("data");
+//                    paymentList = new ArrayList<BeanDate>();
+//                    if (dataArray.length() > 0) {
+//                        for (int i = 0; i < dataArray.length(); i++) {
+//                            JSONArray array = dataArray.getJSONArray(i);
+//                            BeanDate date = new BeanDate();
+//                            date.setDate(array.getString(0));
+//                            date.setMoney(array.getString(1));
+//                            paymentList.add(date);
+//                        }
+//                    }
+//                    calendarView.setPaymentList(paymentList);
+//                }
+//            } catch (JSONException e) {
+//                e.printStackTrace();
+//            }
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//
+//        for (BeanDate bean : paymentList) {
+//            dateList.add(bean.getDate());
+//        }
+//
+//    }
+//
+//}

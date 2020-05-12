@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white">
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="80dp"
+            android:layout_height="60dp">
+
+            <ImageView
+                android:id="@+id/iv_left_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:background="@drawable/back"
+                android:gravity="center_vertical"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:text="优惠券"
+            android:textColor="@color/text_34393c"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/v_head_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_cccccc">
+    </View>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_serve_card_use"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="未使用"
+                android:textColor="@color/text_a11c3f"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_serve_card_used"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已使用"
+                android:textColor="@color/main_bellow_text_no"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_serve_card_out"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已过期"
+                android:textColor="@color/main_bellow_text_no"
+                android:textSize="17sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_cccccc"/>
+
+    <FrameLayout
+        android:id="@+id/fl_serve_use"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+    </FrameLayout>
+
+</LinearLayout>

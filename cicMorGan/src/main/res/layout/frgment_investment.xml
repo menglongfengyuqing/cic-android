@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="84dp"
+        android:background="@color/white"
+        android:gravity="center_vertical">
+
+        <RelativeLayout
+            android:id="@+id/ll_front"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tx_front"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="供应链"
+                android:textColor="@color/text_a11c3f"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/text_front_line"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_below="@id/tx_front"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                android:background="@color/text_a11c3f"/>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/ll_middle"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="24dp"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tx_middle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="安心投"
+                android:textColor="@color/text_34393c"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/text_middle_line"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_below="@id/tx_middle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="11dp"
+                android:background="@color/text_a11c3f"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_cccccc"
+        ></View>
+
+    <FrameLayout
+        android:id="@+id/rl_investment_container"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </FrameLayout>
+
+</LinearLayout>

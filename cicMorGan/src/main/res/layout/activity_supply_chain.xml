@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/activity_base" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <com.d3rich.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/ll_supply_chain"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:background="@color/white"
+            android:divider="@null"
+            android:scrollbars="none"
+             >
+        </com.d3rich.pulltorefresh.library.PullToRefreshListView>
+
+        <RelativeLayout
+            android:id="@+id/rl_no_chain_message"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone" >
+
+            <ImageView
+                android:id="@+id/iv_no_award"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/pic_no_award" />
+
+            <TextView
+                android:id="@+id/tv_no_award_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_no_award"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="26dp"
+                android:text="您还未出借"
+                android:textColor="@color/no_data"
+                android:textSize="14sp" />
+
+            <TextView
+                android:id="@+id/tv_tips"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_marginBottom="20dp"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:text="*市场有风险，出借需谨慎"
+                android:textColor="#c7c7c7"
+                android:textSize="12sp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

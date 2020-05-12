@@ -1,0 +1,226 @@
+{
+    "message": "获取试卷成功",
+    "data": {
+        "topicList": [
+            {
+                "id": "1",
+                "isNewRecord": false,
+                "remarks": null,
+                "createDate": "2017-04-18 15:13:02",
+                "updateDate": "2017-04-18 15:13:04",
+                "name": "1.\t您的年龄是",
+                "remark": null,
+                "answerList": [
+                    {
+                        "id": "1",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:08:58",
+                        "updateDate": "2017-04-18 15:09:01",
+                        "name": "20岁以下",
+                        "remark": null
+                    },
+                    {
+                        "id": "2",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:09:39",
+                        "updateDate": "2017-04-18 15:09:41",
+                        "name": "21-30岁",
+                        "remark": null
+                    },
+                    {
+                        "id": "3",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:10:14",
+                        "updateDate": "2017-04-18 15:10:19",
+                        "name": "31-40岁",
+                        "remark": null
+                    },
+                    {
+                        "id": "4",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:10:37",
+                        "updateDate": "2017-04-18 15:10:40",
+                        "name": "41-50岁",
+                        "remark": null
+                    }
+                ]
+            },
+            {
+                "id": "2",
+                "isNewRecord": false,
+                "remarks": null,
+                "createDate": "2017-04-18 15:13:25",
+                "updateDate": "2017-04-18 15:13:28",
+                "name": "2.\t您会将您收入中的百分之多少用于投资？",
+                "remark": null,
+                "answerList": [
+                    {
+                        "id": "5",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:28:16",
+                        "updateDate": "2017-04-18 15:28:19",
+                        "name": "小于10%",
+                        "remark": null
+                    },
+                    {
+                        "id": "6",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:28:37",
+                        "updateDate": "2017-04-18 15:28:39",
+                        "name": "10%-25%",
+                        "remark": null
+                    },
+                    {
+                        "id": "7",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:28:57",
+                        "updateDate": "2017-04-18 15:29:00",
+                        "name": "25%-50%",
+                        "remark": null
+                    },
+                    {
+                        "id": "8",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:29:11",
+                        "updateDate": "2017-04-18 15:29:13",
+                        "name": "大于50%",
+                        "remark": null
+                    }
+                ]
+            },
+            {
+                "id": "3",
+                "isNewRecord": false,
+                "remarks": null,
+                "createDate": "2017-04-18 15:13:52",
+                "updateDate": "2017-04-18 15:13:55",
+                "name": "3.\t您有多少年投资信托、股票、基金、P2P、金融衍生产品等产品的经验？",
+                "remark": null,
+                "answerList": [
+                    {
+                        "id": "9",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:29:40",
+                        "updateDate": "2017-04-18 15:29:45",
+                        "name": "少于1年",
+                        "remark": null
+                    },
+                    {
+                        "id": "10",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:29:59",
+                        "updateDate": "2017-04-18 15:30:02",
+                        "name": "1至5年",
+                        "remark": null
+                    },
+                    {
+                        "id": "12",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:30:48",
+                        "updateDate": "2017-04-18 15:30:52",
+                        "name": "多于10年",
+                        "remark": null
+                    }
+                ]
+            },
+            {
+                "id": "4",
+                "isNewRecord": false,
+                "remarks": null,
+                "createDate": "2017-04-18 15:14:30",
+                "updateDate": "2017-04-18 15:14:34",
+                "name": "4.您的投资目的是？",
+                "remark": null,
+                "answerList": [
+                    {
+                        "id": "13",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:31:41",
+                        "updateDate": "2017-04-18 15:31:43",
+                        "name": "资产保值，不愿意承担任何投资风险",
+                        "remark": null
+                    },
+                    {
+                        "id": "14",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:31:59",
+                        "updateDate": "2017-04-18 15:32:01",
+                        "name": "资产稳健增长，可以承担一定的投资风险",
+                        "remark": null
+                    },
+                    {
+                        "id": "15",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:32:14",
+                        "updateDate": "2017-04-18 15:32:17",
+                        "name": "资产迅速增长，愿意承担较大的投资风险",
+                        "remark": null
+                    }
+                ]
+            },
+            {
+                "id": "5",
+                "isNewRecord": false,
+                "remarks": null,
+                "createDate": "2017-04-18 15:15:03",
+                "updateDate": "2017-04-18 15:15:06",
+                "name": "5.您有多少年使用互联网的经验？",
+                "remark": null,
+                "answerList": [
+                    {
+                        "id": "9",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:29:40",
+                        "updateDate": "2017-04-18 15:29:45",
+                        "name": "少于1年",
+                        "remark": null
+                    },
+                    {
+                        "id": "10",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:29:59",
+                        "updateDate": "2017-04-18 15:30:02",
+                        "name": "1至5年",
+                        "remark": null
+                    },
+                    {
+                        "id": "11",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:30:15",
+                        "updateDate": "2017-04-18 15:30:17",
+                        "name": "5至10年",
+                        "remark": null
+                    },
+                    {
+                        "id": "12",
+                        "isNewRecord": false,
+                        "remarks": null,
+                        "createDate": "2017-04-18 15:30:48",
+                        "updateDate": "2017-04-18 15:30:52",
+                        "name": "多于10年",
+                        "remark": null
+                    }
+                ]
+            }
+        ],
+        "name": "风险测评"
+    },
+    "state": "0"
+}

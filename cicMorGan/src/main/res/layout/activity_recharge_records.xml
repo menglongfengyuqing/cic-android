@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/text_cccccc"
+        android:progressDrawable="@drawable/progress_bg"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <com.d3rich.pulltorefresh.library.PullToRefreshListView
+            android:id="@+id/ll_recharge_record"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:divider="@null"
+            android:scrollbars="none">
+        </com.d3rich.pulltorefresh.library.PullToRefreshListView>
+
+        <RelativeLayout
+            android:id="@+id/rl_no_recharge_message"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_no_award"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="61dp"
+                android:background="@drawable/pic_emptypage_2"/>
+
+            <TextView
+                android:id="@+id/tv_no_award_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_no_award"
+                android:layout_centerInParent="true"
+                android:layout_marginTop="26dp"
+                android:text="暂无充值记录呦，赶紧去充值吧~"
+                android:textColor="@color/text_989898"
+                android:textSize="15sp"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+</LinearLayout>

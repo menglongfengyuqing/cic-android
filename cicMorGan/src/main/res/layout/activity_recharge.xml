@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/text_f5f5f5"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/text_cccccc"
+        android:progressDrawable="@drawable/progress_bg"/>
+
+    <ScrollView
+        android:id="@+id/sc_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:background="@color/white">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="充值银行"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_bank_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="2dp"
+                        android:layout_toLeftOf="@+id/tv_bank_num"
+                        android:text=""
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_bank_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:text=""
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"/>
+                </RelativeLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@color/text_cccccc">
+
+                </View>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:background="@color/white"
+                    >
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="充值金额"
+                        android:textColor="@color/text_34393c"
+                        android:textSize="15sp"/>
+
+                    <EditText
+                        android:id="@+id/et_recharge_money"
+                        android:layout_width="wrap_content"
+                        android:layout_height="61dp"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:background="@null"
+                        android:gravity="center_vertical|right"
+                        android:hint="请输入充值金额"
+                        android:imeOptions="actionDone"
+                        android:inputType="numberDecimal"
+                        android:maxLength="10"
+                        android:singleLine="true"
+                        android:textColor="@color/blue"
+                        android:textColorHint="@color/text_cccccc"
+                        android:textSize="15sp"/>
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tv_limitation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="16dp"
+                    android:text=""
+                    android:textColor="@color/text_989898"
+                    android:textSize="13sp"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/bt_recharge"
+                android:layout_width="fill_parent"
+                android:layout_height="36dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="41dp"
+                android:background="@drawable/bt_gray"
+                android:text="确认支付"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal">
+
+
+                <TextView
+                    android:id="@+id/tv_transfer_recharge"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="24dp"
+                    android:text="转账充值"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"/>
+
+                <TextView
+                    android:id="@+id/tv_recharge_records"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="25dp"
+                    android:text="充值记录"
+                    android:textColor="@color/blue"
+                    android:textSize="15sp"/>
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="17dp"
+                android:layout_marginTop="20dp"
+                android:text="温馨提示："
+                android:textColor="@color/text_989898"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="6dp"
+                android:text="1、单笔充值金额大于等于5000元时，建议使用转账充值；"
+                android:textColor="@color/text_989898"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="6dp"
+                android:text="2、所有资金均由第三方银行存管。"
+                android:textColor="@color/text_989898"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="6dp"
+                android:text="3、请注意您的银行卡充值限制，以免造成不便。"
+                android:textColor="@color/text_989898"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="6dp"
+                android:text="4、充值过程中可能会出现5-30分钟到账情况，请耐心等待。"
+                android:textColor="@color/text_989898"
+                android:textSize="13sp"/>
+
+            <TextView
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="6dp"
+                android:lineSpacingExtra="5dp"
+                android:text="5、如有疑问请与我们的客服联系，客服电话：400-666-9068。"
+                android:textColor="@color/text_989898"
+                android:textSize="13sp"/>
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+</LinearLayout>

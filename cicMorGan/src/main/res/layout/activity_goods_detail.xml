@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/ic_title"
+        layout="@layout/activity_base"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_below="@id/ic_title"
+        android:background="@color/text_cccccc"
+        android:progressDrawable="@drawable/progress_bg"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/progressBar">
+
+        <ScrollView
+            android:id="@+id/sc_top"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="70dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:orientation="vertical">
+
+                <ImageView
+                    android:id="@+id/iv_goods_img"
+                    android:layout_width="210dp"
+                    android:layout_height="210dp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/pic_investment_detail"
+                    android:scaleType="fitXY"/>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:orientation="horizontal">
+
+
+                        <TextView
+                            android:id="@+id/tv_goods_integral"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="2dp"
+                            android:text=""
+                            android:textColor="@color/text_d40f42"
+                            android:textSize="20sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="积分"
+                            android:textColor="@color/text_d40f42"
+                            android:textSize="13sp"/>
+
+                    </LinearLayout>
+
+                    <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="2dp"-->
+                    <!--android:layout_marginTop="20dp"-->
+                    <!--android:background="@color/bg_gray"/>-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:id="@+id/tv_shop"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="15dp"
+                            android:layout_marginTop="15dp"
+                            android:background="@drawable/bg_ellipse_shop"
+                            android:gravity="center_horizontal"
+                            android:paddingBottom="2dp"
+                            android:paddingLeft="5dp"
+                            android:paddingRight="5dp"
+                            android:paddingTop="2dp"
+                            android:text="商品"
+                            android:textColor="@color/white"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_introduce"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginTop="16dp"
+                            android:gravity="left|center_horizontal"
+                            android:lineSpacingExtra="10dp"
+                            android:text=""
+                            android:textColor="@color/text_34393c"
+                            android:textSize="15sp"/>
+                    </LinearLayout>
+
+
+                    <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="2dp"-->
+                    <!--android:layout_marginTop="13dp"-->
+                    <!--android:background="@color/bg_gray"/>-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="wrap_content"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_marginLeft="10dp"-->
+                    <!--android:layout_marginTop="16dp"-->
+                    <!--android:text="商品规格："-->
+                    <!--android:textColor="@color/text_333333"-->
+                    <!--android:textSize="16sp"-->
+                    <!--android:id="@+id/textView2"/>-->
+
+                    <TextView
+                        android:id="@+id/tv_goods_spec"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text=""
+                        android:textColor="@color/main_bellow_text_no"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="2dp"-->
+                    <!--android:layout_marginTop="13dp"-->
+                    <!--android:background="@color/bg_gray"-->
+                    <!--android:visibility="gone"-->
+                    <!--/>-->
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="16dp"
+                        android:text="兑换流程："
+                        android:textColor="@color/text_333333"
+                        android:textSize="16sp"
+                        android:visibility="gone"
+                        />
+
+                    <TextView
+                        android:id="@+id/tv_flow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="15dp"
+                        android:text=""
+                        android:textColor="@color/main_bellow_text_no"
+                        android:textSize="14sp"
+                        android:visibility="gone"/>
+
+                    <View
+                        android:layout_width="fill_parent"
+                        android:layout_height="10dp"
+                        android:layout_marginTop="13dp"
+                        android:background="@color/text_f2f2f2"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginTop="25dp"
+                        android:text="[兑换说明]"
+                        android:textColor="@color/text_cbb693"
+                        android:textSize="15sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="10dp"
+                        android:text="1.积分商城所有上架商品，用户获取形式分别为抽奖（10积分/次），和用商品所标注相应积分进行兑换。"
+                        android:textColor="@color/text_989898"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="10dp"
+                        android:text="2.用户在积分商城所抽取商品不允许做任何形式变更，均以抽到奖品为准。"
+                        android:textColor="@color/text_989898"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="10dp"
+                        android:text="3.用户抽到或者兑换奖品之后，切记认真填写收货地址，若地址没有或不明，平台不予采购寄送。"
+                        android:textColor="@color/text_989898"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="20dp"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginTop="10dp"
+                        android:lineSpacingExtra="10dp"
+                        android:text="4.如您在积分商城的体验中所遇到任何疑问，请咨询平台客服，最终说明以平台微信客服为准。"
+                        android:textColor="@color/text_989898"
+                        android:textSize="14sp"/>
+
+                    <!--<View-->
+                    <!--android:layout_width="fill_parent"-->
+                    <!--android:layout_height="2dp"-->
+                    <!--android:layout_marginTop="13dp"-->
+                    <!--android:background="@color/bg_gray"-->
+                    <!--android:visibility="gone"/>-->
+                </LinearLayout>
+            </LinearLayout>
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/tv_tishi"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:gravity="center_horizontal"
+                android:text="*市场有风险，出借需谨慎"
+                android:textColor="#c7c7c7"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pic_mall_shadow_1"/>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="66dp">
+
+                <Button
+                    android:id="@+id/bt_exchange"
+                    android:layout_width="match_parent"
+                    android:layout_height="36dp"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/bt_red"
+                    android:text="立即兑换"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"/>
+            </RelativeLayout>
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/activity_base"/>
+
+    <ProgressBar
+        android:id="@+id/progress"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:layout_below="@+id/include"
+        android:background="@color/text_cccccc"
+        android:progressDrawable="@drawable/progress_bg"/>
+
+    <LinearLayout
+        android:id="@+id/ll"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:layout_below="@+id/progress"
+        android:background="@color/white"
+        android:gravity="bottom"
+        android:paddingTop="15dp">
+
+        <RelativeLayout
+            android:id="@+id/rl_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1">
+
+            <!--<com.ztmg.cicmorgan.view.ClickControlledSpinner-->
+            <!--android:id="@+id/spinner"-->
+            <!--style="@android:style/Widget.Holo.Light.Spinner"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@null"-->
+            <!--android:dropDownVerticalOffset="0dp"-->
+            <!--android:overlapAnchor="false"-->
+            <!--android:paddingLeft="-50px"-->
+            <!--android:popupBackground="@drawable/pic_mall_myaward_pop"-->
+            <!--android:spinnerMode="dropdown">-->
+            <!--</com.ztmg.cicmorgan.view.ClickControlledSpinner>-->
+            <TextView
+                android:id="@+id/tv_exchange"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:text="全部"
+                android:textColor="@color/text_cbb693"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/up_down_1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_exchange"
+                android:background="@drawable/pic_mall_myaward_triangle_2"/>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_weight="1">
+
+            <!--<com.ztmg.cicmorgan.view.ClickControlledSpinner-->
+            <!--android:id="@+id/spinner_true"-->
+            <!--style="@android:style/Widget.Holo.Light.Spinner"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_centerVertical="true"-->
+            <!--android:background="@null"-->
+            <!--android:overlapAnchor="false"-->
+            <!--android:paddingLeft="-50px"-->
+            <!--android:popupBackground="@drawable/pic_mall_myaward_pop"-->
+            <!--android:spinnerMode="dropdown">-->
+            <!--</com.ztmg.cicmorgan.view.ClickControlledSpinner>-->
+            <TextView
+                android:id="@+id/tv_true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:text="全部"
+                android:textColor="@color/text_cbb693"
+                android:textSize="15sp"/>
+
+            <ImageView
+                android:id="@+id/up_down_2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/tv_true"
+                android:background="@drawable/pic_mall_myaward_triangle_2"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/ll_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ll"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rl_goods_list"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+            <com.d3rich.pulltorefresh.library.PullToRefreshListView
+                android:id="@+id/lv_goods_list"
+                android:layout_width="fill_parent"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:background="@color/text_f2f2f2"
+                android:divider="@null"
+                android:listSelector="@android:color/transparent"
+                android:nestedScrollingEnabled="false"
+                android:scrollbars="none">
+            </com.d3rich.pulltorefresh.library.PullToRefreshListView>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_no_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_no_award_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/iv_no_award"
+                android:text="这里空空如也，赶紧去兑换吧~"
+                android:textColor="@color/no_data"
+                android:textSize="15sp"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/ll_integral_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pic_mall_myaward_pop"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全部"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center">
+
+            <LinearLayout
+                android:id="@+id/ll_true_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pic_mall_myaward_pop"
+                android:gravity="center_horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="全部"/>
+            </LinearLayout>
+        </LinearLayout>
+    </LinearLayout>
+</RelativeLayout>

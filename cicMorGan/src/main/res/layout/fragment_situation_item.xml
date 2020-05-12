@@ -1,0 +1,354 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+
+    <com.ztmg.cicmorgan.view.ItemScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/ll_wind_control_content"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text="资金用途"-->
+                <!--android:textColor="@color/text_666666"-->
+                <!--android:textSize="16sp"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_use_of_funds"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="100dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:text=""-->
+                <!--android:textColor="#9a9a9a"-->
+                <!--android:textSize="14sp"/>-->
+                <!--</RelativeLayout>-->
+
+                <!--<RelativeLayout-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:background="#FAFAFA">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="15dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:text="还款来源"-->
+                <!--android:textColor="@color/text_666666"-->
+                <!--android:textSize="16sp"/>-->
+
+                <!--<TextView-->
+                <!--android:id="@+id/tv_payment_source"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="100dp"-->
+                <!--android:layout_marginRight="15dp"-->
+                <!--android:layout_marginTop="20dp"-->
+                <!--android:paddingBottom="10dp"-->
+                <!--android:text=""-->
+                <!--android:textColor="#9a9a9a"-->
+                <!--android:textSize="14sp"/>-->
+                <!--</RelativeLayout>-->
+
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="match_parent"-->
+                <!--android:layout_height="50dp"-->
+                <!--android:layout_marginTop="10dp"-->
+                <!--android:orientation="vertical">-->
+
+                <RelativeLayout
+                    android:id="@+id/rl_payment"
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp"
+                    android:layout_marginTop="10dp">
+
+                    <TextView
+                        android:id="@+id/text_view"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="付款方"
+                        android:textColor="@color/text_666666"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_payment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@+id/text_view"
+                        android:text=""
+                        android:textColor="@color/text_989898"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <!--<com.ztmg.cicmorgan.investment.activity.MyGridView-->
+                <!--android:id="@+id/gv_payment"-->
+                <!--android:layout_width="fill_parent"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="100dp"-->
+                <!--android:layout_marginRight="10dp"-->
+                <!--android:horizontalSpacing="20dp"-->
+                <!--android:numColumns="3"-->
+                <!--android:paddingBottom="10dp"-->
+                <!--android:scrollbars="none"-->
+                <!--android:verticalSpacing="10dp">-->
+                <!--</com.ztmg.cicmorgan.investment.activity.MyGridView>-->
+                <!--</LinearLayout>-->
+
+                <View
+                    android:id="@+id/view0"
+                    style="@style/common_small_line"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="60dp">
+
+                    <TextView
+                        android:id="@+id/text_view2"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:text="借款方"
+                        android:textColor="@color/text_666666"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_loan"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@+id/text_view2"
+                        android:text=""
+                        android:textColor="@color/text_989898"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <com.ztmg.cicmorgan.investment.activity.MyGridView
+                    android:id="@+id/gv_loan"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/tv_loan"
+                    android:layout_below="@+id/tv_loan"
+                    android:layout_marginLeft="135dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="30dp"
+                    android:horizontalSpacing="20dp"
+                    android:numColumns="3"
+                    android:verticalSpacing="10dp"
+                    android:visibility="gone">
+                </com.ztmg.cicmorgan.investment.activity.MyGridView>
+
+                <View style="@style/common_small_line"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/source"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="还款来源"
+                        android:textColor="@color/text_666666"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_repayment_source"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@+id/source"
+                        android:text=""
+                        android:textColor="@color/text_989898"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/common_small_line"
+                    android:layout_marginTop="20dp"/>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/mText"
+                        android:layout_width="120dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="还款保障措施"
+                        android:textColor="@color/text_666666"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_repayment"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_marginRight="15dp"
+                        android:layout_toRightOf="@+id/mText"
+                        android:text=""
+                        android:textColor="@color/text_989898"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+                <View
+                    style="@style/common_small_line"
+                    android:layout_marginTop="20dp"/>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="10dp"
+                        android:text="相关文件"
+                        android:textColor="@color/text_666666"
+                        android:textSize="16sp"/>
+
+                    <com.ztmg.cicmorgan.investment.activity.MyGridView
+                        android:id="@+id/gv_relevant_file"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="135dp"
+                        android:layout_marginRight="15dp"
+                        android:layout_marginTop="10dp"
+                        android:horizontalSpacing="20dp"
+                        android:numColumns="3"
+                        android:paddingBottom="10dp"
+                        android:scrollbars="none"
+                        android:verticalSpacing="10dp">
+                    </com.ztmg.cicmorgan.investment.activity.MyGridView>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/ll_see_more"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/icon_unfold"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:layout_gravity="center"
+                        android:gravity="center"
+                        android:text="查看更多"
+                        android:textColor="@color/text_989898"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <View style="@style/common_small_line"/>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="20dp"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:text="风控措施"
+                        android:textColor="@color/text_666666"
+                        android:textSize="16sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_wind_control_measures"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="120dp"
+                        android:layout_marginRight="15dp"
+                        android:text=""
+                        android:textColor="@color/text_989898"
+                        android:textSize="14sp"/>
+                </RelativeLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/linearLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/text_f5f5f5"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="18dp"
+                        android:gravity="center_horizontal"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center_vertical"
+                            android:background="@drawable/icon_shield"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="6dp"
+                            android:text="海口联合农商银行存管已接入  资金受监管"
+                            android:textColor="@color/text_989898"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+
+                    <TextView
+                        android:id="@+id/tv_risk_hints"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginBottom="18dp"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="*市场有风险，出借需谨慎"
+                        android:textColor="@color/text_989898"
+                        android:textSize="12sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </com.ztmg.cicmorgan.view.ItemScrollView>
+</LinearLayout>

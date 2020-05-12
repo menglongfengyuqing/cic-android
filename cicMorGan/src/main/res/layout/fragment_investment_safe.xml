@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <!--<LinearLayout-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:background="@color/white"-->
+        <!--android:gravity="center_vertical" >-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_front"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical" >-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tx_front"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:text="综合排序"-->
+                <!--android:textColor="@color/investment_text_color"-->
+                <!--android:textSize="14dp" />-->
+
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_middle"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical" >-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tx_middle"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:text="按期限"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="14dp" />-->
+
+            <!---->
+        <!--</LinearLayout>-->
+
+        <!--<LinearLayout-->
+            <!--android:id="@+id/ll_after"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="match_parent"-->
+            <!--android:layout_weight="1"-->
+            <!--android:gravity="center"-->
+            <!--android:orientation="vertical" >-->
+
+            <!--<TextView-->
+                <!--android:id="@+id/tx_after"-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="0dp"-->
+                <!--android:layout_weight="1"-->
+                <!--android:gravity="center"-->
+                <!--android:text="按利率"-->
+                <!--android:textColor="@color/black"-->
+                <!--android:textSize="14dp" />-->
+        <!--</LinearLayout>-->
+    <!--</LinearLayout>-->
+    <!--<View -->
+        <!--android:layout_width="fill_parent"-->
+        <!--android:layout_height="5dp"-->
+        <!--android:background="@color/bg_gray"-->
+        <!--/>-->
+    <!--<FrameLayout-->
+        <!--android:id="@+id/rl_investment_safe"-->
+        <!--android:layout_width="match_parent"-->
+        <!--android:layout_height="match_parent" >-->
+    <!--</FrameLayout>-->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:progressDrawable="@drawable/progress_bg"
+        android:layout_height="1.5dp"
+        android:visibility="gone"
+        />
+
+    <com.d3rich.pulltorefresh.library.PullToRefreshListView
+        android:id="@+id/ll_investment_list"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null"
+        android:background="#FFFFFF"
+        android:scrollbars="none"
+        ></com.d3rich.pulltorefresh.library.PullToRefreshListView>
+
+
+</LinearLayout>

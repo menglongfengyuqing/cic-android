@@ -1,0 +1,80 @@
+{
+    "message": "奖品信息查询成功",
+    "data": {
+        "pageCount": 1,
+        "last": 1,
+        "totalCount": 8,
+        "pageNo": 1,
+        "pageSize": 8,
+        "awardlist": [
+            {
+                "needAmount": "700",
+                "imgWeb": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg",
+                "awardId": "644e4347462d480685cb7a8b1be5ac64",
+                "docs": "7",
+                "name": "iphone7",
+                "imgWap": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg"
+            },
+            {
+                "needAmount": "600",
+                "imgWeb": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg",
+                "awardId": "e9ea874782214a4da24c81d45d485189",
+                "docs": "6",
+                "name": "现金1000元",
+                "imgWap": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg"
+            },
+            {
+                "needAmount": "500",
+                "imgWeb": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg",
+                "awardId": "80c6d010183d437b8b62bd093bfe609c",
+                "docs": "5",
+                "name": "现金100元",
+                "imgWap": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg"
+            },
+            {
+                "needAmount": "400",
+                "imgWeb": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg",
+                "awardId": "252f284cf37b4fbb9475db619ffa2283",
+                "docs": "4",
+                "name": "100元抵用券",
+                "imgWap": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg"
+            },
+            {
+                "needAmount": "100",
+                "imgWeb": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg",
+                "awardId": "69572696ccc84f548d5d63d3edaa6885",
+                "docs": "3",
+                "name": "50元抵用券",
+                "imgWap": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg"
+            },
+            {
+                "needAmount": "100",
+                "imgWeb": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg",
+                "awardId": "f11cc12db64b46528fa01cec14e1d02e",
+                "docs": "2",
+                "name": "20元抵用券",
+                "imgWap": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg"
+            },
+            {
+                "needAmount": "100",
+                "imgWeb": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg",
+                "awardId": "74a4d02038aa4b0f9af3c8dec8b826cb",
+                "docs": "1",
+                "name": "10元抵用券",
+                "imgWap": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg"
+            },
+            {
+                "needAmount": "100",
+                "imgWeb": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg",
+                "awardId": "997da07f02b247f8a5e58ebbae1293ff",
+                "docs": "0",
+                "name": "谢谢惠顾",
+                "imgWap": "http://pic.yiipic.com/uploadfile/2016/1128/20161128051733534.jpg"
+            }
+
+        ]
+    },
+    "state": "0"
+}
+
+

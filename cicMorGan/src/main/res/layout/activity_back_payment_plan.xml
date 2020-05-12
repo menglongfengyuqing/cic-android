@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <com.ztmg.cicmorgan.calendar.CollapseCalendarView
+        android:id="@+id/calendar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </com.ztmg.cicmorgan.calendar.CollapseCalendarView>
+
+    <Button
+        android:id="@+id/btn_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="回到今天"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_changemode"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="周月切换"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_hide"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="隐藏、显示农历"
+        android:visibility="gone"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="47dp"
+        android:layout_marginRight="47dp"
+        android:layout_marginTop="42dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="当日待收本息（元）"
+            android:textColor="#888888"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_day_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0.00"
+            android:textColor="#888888"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="47dp"
+        android:layout_marginRight="47dp"
+        android:layout_marginTop="17dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="本月应收本息（元）"
+            android:textColor="#888888"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_month_payment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="0.00"
+            android:textColor="#888888"
+            android:textSize="14sp"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:gravity="center_horizontal"
+        android:text="*市场有风险，出借需谨慎"
+        android:textColor="#c7c7c7"
+        android:textSize="12sp"/>
+
+</LinearLayout>

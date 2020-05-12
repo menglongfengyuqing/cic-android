@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="190dp">
+
+    <!-- 放置轮播图片位置 -->
+
+    <LinearLayout
+        android:id="@+id/ll_top_view_pager"
+        android:layout_width="fill_parent"
+        android:layout_height="190dp"
+        android:orientation="horizontal"/>
+
+    <!-- 左边消息 -->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_home_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/pic_new_message"/>
+
+        <ImageView
+            android:id="@+id/iv_unread_message"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            android:layout_marginLeft="42dp"
+            android:layout_marginTop="32dp"
+            android:background="@drawable/bg_red_circle"
+            android:visibility="gone"
+            />
+    </RelativeLayout>
+    <!-- 右边签到 -->
+
+    <LinearLayout
+        android:id="@+id/ll_sign"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_message"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="27dp"
+            android:background="@drawable/pic_new_sign_nosign"/>
+
+        <TextView
+            android:id="@+id/tv_sign"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:text="签到"
+            android:textColor="@color/white"
+            android:textSize="15sp"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <!-- 放置图片标题的位置 -->
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="图片标题"
+            android:textColor="#F6F6F6"
+            android:visibility="gone"/>
+        <!-- 放置图片中选中点的位置 -->
+
+        <LinearLayout
+            android:id="@+id/ll_dot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"/>
+    </LinearLayout>
+
+</RelativeLayout>

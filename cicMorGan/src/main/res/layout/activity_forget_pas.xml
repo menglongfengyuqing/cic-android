@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/pic_logo"/>
+
+    <com.ztmg.cicmorgan.view.ClearEditText
+        android:id="@+id/tv_phone"
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="73dp"
+        android:background="@null"
+        android:hint="请输入手机号"
+        android:imeOptions="actionDone"
+        android:inputType="phone"
+        android:singleLine="true"
+        android:textColor="@color/text_333333"
+        android:textColorHint="@color/register_text_color"
+        android:textSize="15sp"/>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/text_cccccc"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp">
+
+        <com.ztmg.cicmorgan.view.ClearEditText
+            android:id="@+id/et_code"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/iv_showCode"
+            android:background="@null"
+            android:hint="请输入验证码"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/text_333333"
+            android:textColorHint="@color/register_text_color"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/iv_showCode"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/text_cccccc"/>
+
+    <Button
+        android:id="@+id/bt_forget"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bt_red"
+        android:text="下一步"
+        android:textColor="@color/white"
+        android:textSize="18sp"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:gravity="center_horizontal"
+            android:text="*市场有风险，出借需谨慎"
+            android:textColor="#c7c7c7"
+            android:textSize="12sp"/>
+    </RelativeLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="40dp"
+        android:layout_marginTop="2dp"
+        android:background="#ffffff"
+        android:gravity="center" >
+
+        <TextView
+            android:id="@+id/tv_payment_money"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="还款金额"
+            android:textColor="@color/investment_item_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_payment_num"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="还款期数"
+            android:textColor="@color/investment_item_text"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/tv_payment_time"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="还款时间"
+            android:textColor="@color/investment_item_text"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:background="@color/bg_gray" />
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:gravity="center_horizontal"
+        android:text="*市场有风险，出借需谨慎"
+        android:textColor="#c7c7c7"
+        android:textSize="12sp"
+        android:visibility="gone" />
+
+</LinearLayout>

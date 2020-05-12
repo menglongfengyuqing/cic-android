@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <include layout="@layout/activity_base" />
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="58dp"
+        android:orientation="vertical" >
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/text_a11c3f" />
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="36dp"
+            android:orientation="horizontal" >
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="36dp"
+                android:background="@color/text_a11c3f" />
+
+            <TextView
+                android:id="@+id/tv_risk_file"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@color/text_a11c3f"
+                android:gravity="center"
+                android:text="贸易背景"
+                android:textColor="@color/white"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="36dp"
+                android:background="@color/text_a11c3f" />
+
+            <TextView
+                android:id="@+id/tv_project_file"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="风控相关"
+                android:textColor="@color/text_666666"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="36dp"
+                android:background="@color/text_a11c3f" />
+
+            <TextView
+                android:id="@+id/tv_loan_file"
+                android:layout_width="0dp"
+                android:layout_height="36dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:gravity="center"
+                android:text="项目文件"
+                android:textColor="@color/text_666666"
+                android:textSize="15sp" />
+
+            <View
+                android:layout_width="0.5dp"
+                android:layout_height="36dp"
+                android:background="@color/text_a11c3f" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="0.5dp"
+            android:background="@color/text_a11c3f" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_none"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp"
+        android:text="暂无相关图片"
+        android:textColor="@color/text_666666"
+        android:textSize="17sp"
+        android:visibility="gone"
+         />
+
+    <include
+        android:id="@+id/il_have"
+        android:layout_marginTop="50dp"
+        layout="@layout/img_file_view"
+       />
+
+</LinearLayout>

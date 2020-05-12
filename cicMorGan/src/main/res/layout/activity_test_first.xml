@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/bg_gray"
+                android:orientation="vertical">
+
+
+    <RelativeLayout
+        android:id="@+id/mRelativeLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="55dp"
+            android:background="@drawable/pic_riskevaluation_shadow_card">
+
+
+            <LinearLayout
+                android:id="@+id/ll_title"
+                android:layout_width="match_parent"
+                android:layout_height="105dp"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/risk_bg_1">
+
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="match_parent"
+                    android:layout_height="44dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="45dp"
+                    android:gravity="center"
+                    android:lineSpacingExtra="1dp"
+                    android:text="为什么选择中投摩根？"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"/>
+
+
+            </LinearLayout>
+
+            <ListView
+                android:id="@+id/lv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/ll_title"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/risk_bg_2"
+                android:divider="@null"
+                android:dividerHeight="0dp"
+                android:scrollbars="none">
+            </ListView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/pic_riskevaluation_shadow_circle">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pic_riskevaluation_circle"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tv_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="1"
+                    android:textColor="@color/text_00CBBB"
+                    android:textSize="30sp">
+                </TextView>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="/"
+                    android:textColor="@color/text_00CBBB"
+                    android:textSize="17sp">
+                </TextView>
+
+                <TextView
+                    android:id="@+id/tv_sum"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:padding="1dp"
+                    android:text="10"
+                    android:textColor="@color/text_00CBBB"
+                    android:textSize="17sp">
+                </TextView>
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_title"-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginLeft="30dp"-->
+    <!--android:layout_marginTop="30dp"-->
+    <!--android:text="题目"-->
+    <!--android:textColor="#1B1B1B"-->
+    <!--android:textSize="17sp"/>-->
+
+    <LinearLayout
+        android:id="@+id/ll_bt_next"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mRelativeLayout"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/pic_riskevaluation_shadow_completebtn">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="38dp"
+            android:layout_gravity="center"
+            android:background="@drawable/bt_risk_ok_2"
+            android:gravity="center"
+            android:text="完成测评"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+        <!--  android:background="@drawable/bt_risk_ok_1"-->
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/back_on"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="20dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="17dp"
+            android:layout_height="17dp"
+            android:background="@drawable/icon_back"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="返回上一题"
+            android:textColor="@color/text_00CBBB"
+            android:textSize="17sp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

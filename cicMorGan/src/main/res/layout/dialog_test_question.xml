@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="75dp"
+            android:gravity="center"
+            android:text="测评完成，您属于"
+            android:textColor="@color/text_34393c"
+            android:textSize="17sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_test_dialog_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/text_00CBBB"
+            android:textSize="30sp"/>
+
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="36dp"
+            android:src="@drawable/pic_riskevaluation_completeimg"/>
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_test_dialog_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_gravity="center_horizontal"-->
+        <!--android:layout_marginTop="16dp"-->
+        <!--android:text="您属于保守型"-->
+        <!--android:textColor="@color/yellow"-->
+        <!--android:textSize="13sp"/>-->
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="60dp">
+
+
+            <LinearLayout
+                android:id="@+id/ll_determine"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="30dp"
+                android:background="@drawable/pic_riskevaluation_shadow_cfmbtn">
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/risk_bg_3"
+                    android:gravity="center"
+                    android:text="确定"
+                    android:textColor="@color/white"
+                    android:textSize="17sp"/>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/ll_anew"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="30dp"
+                android:background="@drawable/pic_riskevaluation_shadow_cfmbtn">
+
+                <TextView
+                    android:layout_width="130dp"
+                    android:layout_height="40dp"
+                    android:background="@drawable/risk_bg_4"
+                    android:gravity="center"
+                    android:text="重新测评"
+                    android:textColor="@color/text_00CBBB"
+                    android:textSize="17sp"/>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

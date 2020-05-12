@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/rl_layout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/iv_new_peopel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/pic_new_new_hand"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="17dp"
+            android:text=""
+            android:textColor="@color/black"
+            android:textSize="15sp"/>
+
+
+        <TextView
+            android:id="@+id/tv_num"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="17dp"
+            android:text="0.00"
+            android:textColor="@color/red2"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_insignia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginTop="23dp"
+            android:layout_toRightOf="@id/tv_num"
+            android:text="%"
+            android:textColor="@color/red2"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/tv_rate_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_num"
+            android:layout_marginLeft="23dp"
+            android:layout_marginTop="17dp"
+            android:text="年化利率"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp"/>
+
+        <TextView
+            android:id="@+id/iv_sell_out"
+            android:layout_width="68dp"
+            android:layout_height="32dp"
+            android:layout_alignParentRight="true"
+            android:layout_below="@id/tv_name"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="30dp"
+            android:text=""
+            android:textColor="@color/blue"
+            android:textSize="18sp"/>
+
+        <View
+            android:id="@+id/v_data_num"
+            android:layout_width="1dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/tv_name"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="19dp"
+            android:layout_toRightOf="@id/tv_rate_text"
+            android:background="#e6e6e6"/>
+
+        <TextView
+            android:id="@+id/tv_term"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_name"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="19dp"
+            android:layout_toRightOf="@id/v_data_num"
+            android:text=""
+            android:textColor="@color/text_333333"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_term"
+            android:layout_marginLeft="35dp"
+            android:layout_marginTop="14dp"
+            android:layout_toRightOf="@id/v_data_num"
+            android:text="期限"
+            android:textColor="@color/text_gray"
+            android:textSize="12sp"/>
+
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="1dp"
+            android:layout_below="@id/tv_rate_text"
+            android:layout_marginTop="15dp"
+            android:background="@color/bg_gray"/>
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/tv_tips"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:text="*市场有风险，出借需谨慎"
+        android:textColor="#c7c7c7"
+        android:textSize="12sp"
+        android:visibility="gone"/>
+</LinearLayout>

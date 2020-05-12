@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="NumberProgressBar">
+        <attr name="progress_current" format="integer"/>
+        <attr name="progress_max" format="integer"/>
+
+        <attr name="progress_unreached_color" format="color"/>
+        <attr name="progress_reached_color" format="color"/>
+
+        <attr name="progress_reached_bar_height" format="dimension"/>
+        <attr name="progress_unreached_bar_height" format="dimension"/>
+
+        <attr name="progress_text_size" format="dimension"/>
+        <attr name="progress_text_color" format="color"/>
+
+        <attr name="progress_text_offset" format="dimension"/>
+
+        <attr name="progress_text_visibility" format="enum">
+            <enum name="visible" value="0"/>
+            <enum name="invisible" value="1"/>
+        </attr>
+    </declare-styleable>
+
+    <declare-styleable name="Themes">
+        <attr name="numberProgressBarStyle" format="reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="LockPatternView">
+
+        <!--
+             Aspect to use when drawing LockPatternView. Choices are "square"(default), "lock_width"
+             or "lock_height"
+        -->
+        <attr name="aspect">
+            <enum name="square" value="0"/>
+            <enum name="lockWidth" value="1"/>
+            <enum name="lockHeight" value="2"/>
+        </attr>
+        <attr name="line" format="color"/>
+        <attr name="btnNormal" format="reference"/>
+        <attr name="btnTouched" format="reference"/>
+        <attr name="circleNormal" format="reference"/>
+        <attr name="circleGreen" format="reference"/>
+        <attr name="circleRed" format="reference"/>
+        <attr name="arrowGreenUp" format="reference"/>
+        <attr name="arrowRedUp" format="reference"/>
+    </declare-styleable>
+    <declare-styleable name="day">
+        <attr name="state_current" format="boolean"/>
+    </declare-styleable>
+
+    <attr name="calendarViewStyle" format="reference"/>
+    <declare-styleable name="CircleImageView">
+        <attr name="border_width" format="dimension"/>
+        <attr name="border_color" format="color"/>
+    </declare-styleable>
+    <!-- 日历 -->
+    <declare-styleable name="NCalendar">
+        <attr name="solarTextColor" format="color"/>
+        <attr name="lunarTextColor" format="color"/>
+        <attr name="hintColor" format="color"/>
+        <attr name="selectCircleColor" format="color"/>
+        <attr name="clickSelectCircleColor" format="color"/>
+        <attr name="selectTodayCircleColor" format="color"/>
+        <attr name="solarTextSize" format="dimension"/>
+        <attr name="lunarTextSize" format="dimension"/>
+        <attr name="selectCircleRadius" format="integer"/>
+        <attr name="isShowLunar" format="boolean"/>
+
+        <attr name="pointSize" format="dimension"/>
+        <attr name="pointColor" format="color"/>
+        <attr name="hollowCircleColor" format="color"/>
+        <attr name="hollowCircleStroke" format="integer"/>
+        <attr name="startDate" format="string"/>
+        <attr name="endDate" format="string"/>
+
+        <attr name="calendarHeight" format="dimension"/>
+        <attr name="duration" format="integer"/>
+
+        <attr name="firstDayOfWeek" format="string"/>
+        <attr name="defaultCalendar" format="string"/>
+
+        <attr name="isShowHoliday" format="boolean"/>
+        <attr name="holidayColor" format="color"/>
+        <attr name="workdayColor" format="color"/>
+        <attr name="backgroundColor" format="color"/>
+
+    </declare-styleable>
+
+    <!--圆环比例展示图-->
+    <attr name="visible_tab_count" format="integer"/>
+    <declare-styleable name="ViewPagerIndicator">
+        <attr name="visible_tab_count"/>
+    </declare-styleable>
+
+    <declare-styleable name="WatchView">
+        <attr name="watchRadius" format="dimension"/>
+        <attr name="watchPadding" format="dimension"/>
+        <attr name="watchScalePadding" format="dimension"/>
+        <attr name="watchScaleColor" format="color|reference"/>
+        <attr name="watchScaleLength" format="dimension|reference"/>
+        <attr name="watchHourScaleColor" format="dimension|reference"/>
+        <attr name="watchHourScaleLength" format="dimension|reference"/>
+        <attr name="hourPointColor" format="color|reference"/>
+        <attr name="hourPointLength" format="dimension|reference"/>
+        <attr name="minutePointColor" format="color|reference"/>
+        <attr name="minutePointLength" format="dimension|reference"/>
+        <attr name="secondPointColor" format="color|reference"/>
+        <attr name="secondPointLength" format="dimension|reference"/>
+        <attr name="timeTextSize" format="dimension|reference"/>
+        <attr name="timeTextColor" format="color|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="LineChart">
+        <attr name="dotNum" format="integer"/>
+        <attr name="lineColor" format="color|reference"/>
+        <attr name="dotRadius" format="dimension|reference"/>
+    </declare-styleable>
+
+    <declare-styleable name="CircleScaleView">
+        <attr name="lifeCostColor" format="color|reference"/>
+        <attr name="communicateCostColor" format="color|reference"/>
+        <attr name="trafficCostColor" format="color|reference"/>
+        <attr name="entertainmentCostColor" format="color|reference"/>
+        <attr name="circleWidth" format="dimension"/>
+        <attr name="radius" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="DropdownLayout">
+        <attr name="dropSpeed" format="integer"/>
+    </declare-styleable>
+    <declare-styleable name="SlideDetailsLayout">
+        <!-- float value for indicate the moment of switch panel-->
+        <attr name="percent" format="float"/>
+        <!-- how long the animation keep-->
+        <attr name="durations" format="integer"/>
+        <!-- default panel to show after init-->
+        <attr name="default_panel" format="enum">
+            <enum name="front" value="0"/>
+            <enum name="behind" value="1"/>
+        </attr>
+    </declare-styleable>
+    <!--TabIndicator的参数设置-->
+    <declare-styleable name="PagerSlidingTab">
+        <attr name="indicatorColor" format="color"/>
+        <attr name="underlineColor" format="color"/>
+        <attr name="dividerColor" format="color"/>
+        <attr name="indicatorHeight" format="dimension"/>
+        <attr name="underlineHeight" format="dimension"/>
+        <attr name="pst_dividerPadding" format="dimension"/>
+        <attr name="tabPaddingLeftRight" format="dimension"/>
+        <attr name="scrollOffset" format="dimension"/>
+        <attr name="tabBackgrounds" format="reference"/>
+        <attr name="sameLine" format="boolean"/>
+        <attr name="pst_textAllCaps" format="boolean"/>
+    </declare-styleable>
+    <!--image view 图片加载圆角-->
+    <declare-styleable name="Custom_Round_Image_View">
+        <attr name="custom_radius" format="dimension"/>
+        <attr name="left_top_radius" format="dimension"/>
+        <attr name="right_top_radius" format="dimension"/>
+        <attr name="right_bottom_radius" format="dimension"/>
+        <attr name="left_bottom_radius" format="dimension"/>
+    </declare-styleable>
+</resources>

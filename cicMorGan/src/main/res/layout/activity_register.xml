@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:id="@+id/lin_content"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <!--<RelativeLayout-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content">-->
+
+    <!--<ImageView-->
+    <!--android:layout_width="fill_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:background="@drawable/pic_register_top"/>-->
+
+    <!--<ImageView-->
+    <!--android:id="@+id/iv_back"-->
+    <!--android:layout_width="wrap_content"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_marginTop="20dp"-->
+    <!--android:background="@drawable/nav_icon_back_white"/>-->
+    <!--</RelativeLayout>-->
+    <include layout="@layout/activity_base"/>
+
+    <com.ztmg.cicmorgan.view.OnTouchScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <LinearLayout
+            android:id="@+id/line"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+
+            <ImageView
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/pic_logo"/>
+
+
+            <com.ztmg.cicmorgan.view.ClearEditText
+                android:id="@+id/tv_phone"
+                android:layout_width="fill_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="50dp"
+                android:background="@null"
+                android:hint="请输入手机号"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:maxLength="11"
+                android:singleLine="true"
+                android:textColor="@color/text_333333"
+                android:textColorHint="@color/register_text_color"
+                android:textSize="15sp"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/text_cccccc"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="56dp">
+
+                <com.ztmg.cicmorgan.view.ClearEditText
+                    android:id="@+id/et_password"
+                    android:layout_width="fill_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="50dp"
+                    android:background="@null"
+                    android:hint="请输入密码"
+                    android:imeOptions="actionDone"
+                    android:password="true"
+                    android:singleLine="true"
+                    android:textColor="@color/text_333333"
+                    android:textColorHint="@color/register_text_color"
+                    android:textSize="15sp"
+                    android:layout_alignParentTop="true"
+                    android:layout_toStartOf="@+id/relativeLayout3" />
+
+                <RelativeLayout
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="15dp"
+                    android:id="@+id/relativeLayout3">
+
+                    <Button
+                        android:id="@+id/iv_eyes_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:background="@drawable/pic_no_pas"/>
+                </RelativeLayout>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/text_cccccc"/>
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="56dp">
+
+                <com.ztmg.cicmorgan.view.ClearEditText
+                    android:id="@+id/et_code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="56dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="115dp"
+                    android:background="@null"
+                    android:hint="请输入右侧验证码"
+                    android:imeOptions="actionDone"
+                    android:inputType="number"
+                    android:maxLength="6"
+                    android:singleLine="true"
+                    android:textColor="@color/text_333333"
+                    android:textColorHint="@color/register_text_color"
+                    android:textSize="15sp"/>
+
+                <ImageView
+                    android:id="@+id/iv_showCode"
+                    android:layout_width="100dp"
+                    android:layout_height="fill_parent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"/>
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/text_cccccc"/>
+
+            <com.ztmg.cicmorgan.view.ClearEditText
+                android:id="@+id/et_request_text"
+                android:layout_width="fill_parent"
+                android:layout_height="56dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@null"
+                android:hint="请输入邀请人手机号(选填)"
+                android:imeOptions="actionDone"
+                android:inputType="phone"
+                android:singleLine="true"
+                android:textColor="@color/text_333333"
+                android:textColorHint="@color/register_text_color"
+                android:textSize="15sp"/>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:background="@color/text_cccccc"/>
+
+            <Button
+                android:id="@+id/bt_login"
+                android:layout_width="fill_parent"
+                android:layout_height="36dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="40dp"
+                android:background="@drawable/bt_gray_36"
+                android:text="同意用户协议并注册"
+                android:textColor="@color/textColorWhite"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/ll_agreeage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center_horizontal"
+                android:text="查看用户协议"
+                android:textColor="@color/text_34393c"
+                android:textSize="13sp"/>
+
+
+            <TextView
+                android:id="@+id/tv_login"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="25dp"
+                android:layout_marginTop="25dp"
+                android:gravity="center_horizontal"
+                android:text="已有账号，直接登录"
+                android:textColor="@color/text_34393c"
+                android:textSize="13sp"/>
+        </LinearLayout>
+    </com.ztmg.cicmorgan.view.OnTouchScrollView>
+</LinearLayout>

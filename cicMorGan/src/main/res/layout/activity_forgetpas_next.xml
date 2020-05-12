@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/pic_logo"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="73dp">
+
+        <com.ztmg.cicmorgan.view.ClearEditText
+            android:id="@+id/et_phone_code"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/tv_send_phone_code"
+            android:background="@null"
+            android:hint="请输入您的短信验证码"
+            android:imeOptions="actionDone"
+            android:maxLength="6"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_333333"
+            android:textColorHint="@color/register_text_color"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_send_phone_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="重新获取"
+            android:textColor="@color/text_989898"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/text_cccccc"/>
+
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp">
+
+        <com.ztmg.cicmorgan.view.ClearEditText
+            android:id="@+id/et_password"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="15dp"
+            android:layout_toLeftOf="@+id/rl_eyes"
+            android:background="@null"
+            android:hint="请输入新密码"
+            android:imeOptions="actionDone"
+            android:password="true"
+            android:singleLine="true"
+            android:textColor="@color/text_333333"
+            android:textColorHint="@color/register_text_color"
+            android:textSize="15sp"/>
+
+        <!--<RelativeLayout-->
+        <!--android:id="@+id/rl_eyes"-->
+        <!--android:layout_width="40dp"-->
+        <!--android:layout_height="40dp"-->
+        <!--android:layout_alignParentRight="true"-->
+        <!--android:layout_centerVertical="true"-->
+        <!--android:layout_marginRight="15dp">-->
+
+        <!--<Button-->
+        <!--android:id="@+id/iv_eyes_no"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:background="@drawable/pic_no_pas"/>-->
+        <!--</RelativeLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/rl_eyes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp">
+
+            <Button
+                android:id="@+id/iv_eyes_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/pic_pas"/>
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/text_cccccc"/>
+
+    <Button
+        android:id="@+id/bt_ok"
+        android:layout_width="fill_parent"
+        android:layout_height="36dp"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/bt_gray_36"
+        android:text="完成"
+        android:textColor="@color/textColorWhite"
+        android:textSize="17sp"/>
+
+
+</LinearLayout>

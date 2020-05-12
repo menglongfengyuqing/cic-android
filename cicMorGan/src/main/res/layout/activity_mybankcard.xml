@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <RelativeLayout
+        android:id="@+id/relativelayout_replace"
+        android:layout_width="match_parent"
+        android:layout_height="61dp">
+
+        <TextView
+            android:id="@+id/tv_view"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="15dp"
+            android:gravity="center"
+            android:text="绑定银行"
+            android:textColor="@color/text_34393c"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/txt_bankcard"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="15dp"
+            android:layout_toLeftOf="@+id/iv_my_bank_card"
+            android:layout_toRightOf="@+id/tv_view"
+            android:gravity="right|center"
+            android:text=""
+            android:textColor="@color/text_34393c"
+            android:textSize="15sp"/>
+
+        <ImageView
+            android:id="@+id/iv_my_bank_card"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/pic_account_enter_no_write"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@color/text_cccccc"/>
+
+    <TextView
+        android:id="@+id/txt_updatebankcard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="25dp"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="更改银行卡"
+        android:textColor="@color/text_a11c3f"
+        android:textSize="15sp"
+        android:visibility="invisible"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="20dp"
+        android:gravity="center|left"
+        android:lineSpacingExtra="10dp"
+        android:text="温馨提示：\n
+1、如需解绑银行卡，请联系客服进行线下沟通。\n
+2、点击更改银行卡后会跳转到存管银行界面，请按照提示操作，输入您新卡信息，进行提交。\n
+3、提交完成后，请您邮件发送到Kefu@cicmorgan.com邮箱，提供您的平台注册手机号码、银行预留手机号、新旧银行卡号、变更原因及手持身份证和新卡照片。\n
+4、为保证您的资金安全，请您理解，如有问题，请及时联系平台客服400-666-9068."
+        android:textColor="@color/text_989898"
+        android:textSize="13sp"/>
+</LinearLayout>

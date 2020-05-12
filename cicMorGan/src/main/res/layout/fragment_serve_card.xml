@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_serve_card_out"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已过期"
+                android:textColor="@color/account_ansaction_text"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/v_serve_card_out_line"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@id/tv_out"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="3dp"
+                android:background="@color/red2"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_serve_card_use"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="可使用"
+                android:textColor="@color/account_ansaction_text"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/v_serve_card_use_line"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@id/tv_use"
+                android:layout_alignParentBottom="true"
+                android:background="@color/red2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_serve_card_used"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已使用"
+                android:textColor="@color/account_ansaction_text"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/v_serve_card_used_line"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@id/tv_used"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="3dp"
+                android:background="@color/red2"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="13dp"
+        android:background="@color/bg_gray" />
+
+    <FrameLayout
+        android:id="@+id/fl_serve_use"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" >
+    </FrameLayout>
+
+</LinearLayout>

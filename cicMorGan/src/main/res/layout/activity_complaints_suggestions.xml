@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bg_gray"
+    android:orientation="vertical" >
+
+    <include layout="@layout/activity_base" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="38dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/edit" >
+
+        <TextView
+            android:id="@+id/tv_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="8dp"
+            android:text="@string/phone"
+            android:textColor="@color/phone_color"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_phone"
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:layout_marginLeft="3dp"
+            android:layout_toRightOf="@id/tv_text"
+            android:background="@null"
+            android:hint="@string/phone_text"
+            android:phoneNumber="true"
+            android:textColorHint="@color/text"
+            android:textSize="15sp"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+             />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_bg"
+        android:layout_width="wrap_content"
+        android:layout_height="180dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="15dp"
+        android:background="@color/white" >
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:background="@color/line_bian" />
+
+        <EditText
+            android:id="@+id/et_text"
+            android:layout_width="fill_parent"
+            android:layout_height="180dp"
+            android:background="@null"
+            android:hint="告诉我们，您遇到的问题及建议，我们会及时改进"
+            android:paddingLeft="10dp"
+            android:paddingTop="10dp"
+            android:textColor="@color/investment_detail_text"
+            android:gravity="top"
+            android:textSize="13sp" 
+            />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:background="@color/line_bian" />
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/line_bian" />
+
+        <View
+            android:layout_width="1dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@color/line_bian" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <Button
+            android:id="@+id/bt_submit"
+            android:layout_width="fill_parent"
+            android:layout_height="42dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="62dp"
+            android:layout_marginRight="62dp"
+            android:layout_marginTop="80dp"
+            android:background="@drawable/bg_button"
+            android:text="提交"
+            android:textColor="@color/textColorWhite"
+            android:textSize="21sp" />
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text="*市场有风险，出借需谨慎"
+            android:textColor="#c7c7c7"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
+</LinearLayout>

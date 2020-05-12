@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- *********************** 主色 *********************** -->
+    <color name="common_colorPrimary">#347AEB</color>
+    <color name="common_colorPrimaryDark">#2663c7</color>
+    <color name="common_colorAccent">#347AEB</color>
+    <color name="common_colorDisable">#C6CBD4</color>
+    <color name="common_color_activity_bg">#FBFBFB</color>
+
+    <!--标题栏 颜色-->
+    <color name="text_cccccc">#cccccc</color>
+
+    <!-- 标题 -->
+    <color name="black">#252526</color>
+    <color name="textColorWhite">#fdfdf7</color>
+    <color name="touming">#00000000</color>
+    <!-- 登录 -->
+    <color name="bg_gray">#efefef</color>
+    <!-- 首页 -->
+    <color name="white">#ffffff</color>
+    <color name="phone_color">#3f3f3f</color>
+    <color name="text">#b7b6b6</color>
+    <color name="home_back">#f1f1f1</color>
+    <color name="home_title_color">#c8c8c8</color>
+    <color name="bg">#fefdfd</color>
+    <color name="investment_text_color">#D2A27C</color>
+    <color name="red2">#EB2E35</color>
+    <color name="text_gray">#A4A2A3</color>
+    <color name="main_bellow_text">#a11c3f</color>
+    <color name="main_bellow_text_no">#34393c</color>
+    <color name="investment_list_head_text">#120305</color>
+    <color name="investment_item_text">#919191</color>
+    <color name="investment_detail_text">#838686</color>
+    <color name="progress_bar">#c4c4c4</color>
+    <color name="progress_bar_red">#a01e3f</color>
+    <color name="investment_detail_text1">#868686</color>
+    <color name="account_sum_text">#404040</color>
+    <color name="account_sum_text1">#010101</color>
+    <color name="account_sum_text2">#353535</color>
+    <color name="account_ansaction_text">#282828</color>
+    <color name="line">#BFBFBF</color>
+    <!--<color name="blue">#3E93E6</color>-->
+    <color name="blue">#a11c3f</color>
+    <color name="green">#6dcead</color>
+    <color name="yellow">#fe6a00</color>
+    <color name="bank_account_text">#6d6d6d</color>
+    <color name="trans">#00000000</color>
+    <color name="gesturemode">#28394D</color>
+
+    <drawable name="trans">#00000000</drawable>
+
+    <color name="line_bian">#b5b5b5</color>
+    <color name="colck_wrong">#22B2F6</color>
+    <color name="recharge">#9D9D9D</color>
+    <color name="recharge_bg">#F7F5F6</color>
+    <color name="newblue">#40A2FB</color>
+    <!-- 弹出城市 -->
+    <color name="app_bt_gray">#E4E5E5</color>
+    <color name="app_divid">#a2a2a2</color>
+    <color name="province_line_border">#C7C7C7</color>
+    <color name="gray">#DBD7D8</color>
+    <color name="graydd">#DBD7D8</color>
+    <color name="imagebg">#0D0D0D</color>
+
+    <!-- 新改版 -->
+    <color name="new_home_bg">#f6f6f6</color>
+    <color name="text_333333">#333333</color>
+    <color name="text_666666">#666666</color>
+    <color name="new_red">#e5363a</color>
+    <color name="register_text_color">#c1c1c1</color>
+    <color name="new_gray">#c4c4c4</color>
+    <color name="no_data">#d3d3d3</color>
+    <!-- calendar color -->
+    <color name="cal_text_normal">#4A4A4A</color>
+    <color name="cal_text_light">#ababab</color>
+    <color name="cal_text_super_light">#c0c0c0</color>
+    <color name="cal_blue_light">#8EC5EE</color>
+    <color name="cal_blue_dark">#336F9C</color>
+    <color name="cal_stroke">#77d4f6</color>
+    <color name="cal_days_title">#F5F5F5</color>
+    <color name="cal_vertical_line">#E9F6FF</color>
+    <color name="cal_line_grey">#9B9B9B</color>
+    <color name="cal_color_white">#FFFFFF</color>
+    <color name="cal_color_red">#FFE54E36</color>
+    <color name="cal_color_green">#FF16A085</color>
+    <color name="cal_color_point_blue">#FF1875D1</color>
+    <color name="cl_gray">#989898</color>
+    <color name="text_c4c4c4">#c4c4c4</color>
+    <color name="text_00cf9f">#00cf9f</color>
+    <color name="text_ec6d5a">#ec6d5a</color>
+    <color name="text_fe3939">#fe3939</color>
+    <color name="text_00d7f8">#00d7f8</color>
+    <color name="text_00aeef">#00aeef</color>
+    <color name="text_e9e0d1">#e9e0d1</color>
+    <color name="text_e75829">#e75829</color>
+    <color name="text_e75a27">#e75a27</color>
+    <color name="text_c2c2c2">#c2c2c2</color>
+    <color name="text_cfcfcf">#cfcfcf</color>
+    <color name="text_141414">#141414</color>
+    <color name="text_414141">#414141</color>
+    <color name="text_e5e5e5">#e5e5e5</color>
+    <color name="text_3e3d3d">#3e3d3d</color>
+    <color name="text_929292">#929292</color>
+    <color name="text_827f80">#827f80</color>
+    <color name="text_ff5985">#ff5985</color>
+
+    <!-- 日历 -->
+
+    <color name="solarTextColor">#000000</color>
+    <color name="lunarTextColor">#B2B2B2</color>
+    <color name="hintColor">#999999</color>
+    <color name="selectCircleColor">#EB2E35</color>
+    <color name="selectTodayCircleColor">#3E93E6</color>
+    <color name="holidayColor">#39AF81</color>
+    <color name="workdayColor">#EC7230</color>
+    <color name="pointColor">#B2B2B2</color>
+    <color name="text_2d2d2d">#2d2d2d</color>
+    <color name="text_303030">#303030</color>
+    <color name="text_34393c">#34393c</color>
+    <color name="text_f5f5f5">#F5F5F5</color>
+    <color name="text_f6f6f6">#F6F6F6</color>
+    <color name="text_cbb693">#cbb693</color>
+    <color name="text_a11c3f">#a11c3f</color>
+    <color name="text_989898">#989898</color>
+    <color name="text_999999">#999999</color>
+    <color name="text_294FCC">#294FCC</color>
+
+    <color name="text_f2f2f2">#f2f2f2</color>
+    <color name="text_f3f3f3">#f3f3f3</color>
+    <color name="text_d40f42">#d40f42</color>
+    <color name="bg_left_progress">#DD2F1C</color>
+    <color name="text_00a166">#00a166</color>
+    <color name="text_63061D">#63061D</color>
+    <color name="text_d40">#d40</color>
+    <color name="text_e7dcc5">#e7dcc5</color>
+    <color name="text_00CBBB">#00cbbb</color>
+    <color name="text_ff0000">#ff0000</color>
+    <color name="text_00cfc8">#00cfc8</color>
+
+    <!--一条线-->
+    <color name="common_color_line_color_bj">#CCCCCC</color>
+
+    <color name="text_normal">#626262</color>
+    <color name="text_light">#ababab</color>
+    <color name="text_super_light">#c0c0c0</color>
+
+    <color name="blue_light">#48a5cc</color>
+    <color name="blue_dark">#00aeef</color>
+    <color name="stroke">#77d4f6</color>
+    <color name="weeks">#9d9d9d</color>
+
+</resources>

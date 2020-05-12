@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="#f8f8f8"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ScrollView
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@color/text_f2f2f2"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/iv_top"
+                android:layout_width="fill_parent"
+                android:layout_height="113dp"
+                android:background="@drawable/pic_integral_rule_top"
+                android:visibility="gone"/>
+
+            <LinearLayout
+                android:id="@+id/ll_content"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_below="@id/iv_top"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/bg_integral_rule"
+                android:orientation="vertical"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp">
+
+                <TextView
+                    style="@style/common_integral_rule"
+                    android:layout_marginTop="20dp"
+                    android:text="注册、签到、出借、邀请、活动奖励、生日福利等"/>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:layout_marginTop="35dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginTop="12dp"-->
+                <!--android:gravity="center"-->
+                <!--android:text="1"-->
+                <!--android:textColor="@color/text_34393c"-->
+                <!--android:textSize="15sp"/>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="35dp"
+                    android:text="1.出借"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+                <!--</LinearLayout>-->
+
+                <TextView
+                    style="@style/common_integral_rule"
+                    android:text="用户完成出借可获得相应数量积分。计算方式：出借金额*出借项目月份数/100"/>
+
+                <TextView
+                    style="@style/common_integral_rule"
+                    android:text="示例（1）：出借30天项目5000元，可获得5000*1/100=50积分"/>
+
+                <TextView
+                    style="@style/common_integral_rule"
+                    android:text="示例（2）：出借180天项目20000元，可获得20000*6/100=1200积分"/>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginTop="12dp"-->
+                <!--android:background="@drawable/btn_order_number"-->
+                <!--android:gravity="center"-->
+                <!--android:text="2"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="15sp"/>-->
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="35dp"
+                    android:text="2.注册"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+                <!--</LinearLayout>-->
+
+                <TextView
+                    style="@style/common_integral_rule"
+                    android:text="用户完成注册可获得500积分。"/>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginTop="12dp"-->
+                <!--android:background="@drawable/btn_order_number"-->
+                <!--android:gravity="center"-->
+                <!--android:text="3"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="15sp"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="14dp"-->
+                <!--android:text="邀请好友"-->
+                <!--android:textColor="@color/text_34393c"-->
+                <!--android:textSize="15sp"/>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="35dp"
+                    android:text="2.邀请好友"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+                <!--</LinearLayout>-->
+
+                <TextView
+                    style="@style/common_integral_rule"
+                    android:text="邀请好友注册中投摩根，被邀请人完成出借，邀请人可获得100积分奖励，同时获得该被邀请用户每笔出借所获积分的5%。"/>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginTop="12dp"-->
+                <!--android:background="@drawable/btn_order_number"-->
+                <!--android:gravity="center"-->
+                <!--android:text="4"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="15sp"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="14dp"-->
+                <!--android:text="签到"-->
+                <!--android:textColor="@color/text_34393c"-->
+                <!--android:textSize="15sp"/>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="35dp"
+                    android:text="2.签到"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+                <!--</LinearLayout>-->
+
+                <TextView
+                    style="@style/common_integral_rule"
+                    android:text="注册用户每日签到可获得1积分，连续签到7天可额外获得3积分（连续7天签到总共可获得10积分）"/>
+
+                <!--<LinearLayout-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="13dp"-->
+                <!--android:orientation="horizontal">-->
+
+                <!--<TextView-->
+                <!--android:layout_width="20dp"-->
+                <!--android:layout_height="20dp"-->
+                <!--android:layout_marginTop="12dp"-->
+                <!--android:background="@drawable/btn_order_number"-->
+                <!--android:gravity="center"-->
+                <!--android:text="5"-->
+                <!--android:textColor="@color/white"-->
+                <!--android:textSize="15sp"/>-->
+
+                <!--<TextView-->
+                <!--android:layout_width="wrap_content"-->
+                <!--android:layout_height="wrap_content"-->
+                <!--android:layout_marginLeft="8dp"-->
+                <!--android:layout_marginTop="14dp"-->
+                <!--android:text="活动奖励"-->
+                <!--android:textColor="@color/text_34393c"-->
+                <!--android:textSize="15sp"/>-->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="35dp"
+                    android:text="2.活动奖励"
+                    android:textColor="@color/text_34393c"
+                    android:textSize="15sp"/>
+                <!--</LinearLayout>-->
+
+                <TextView
+                    style="@style/common_integral_rule"
+                    android:layout_marginBottom="20dp"
+                    android:text="用户生日当天完成签到可获双倍积分，完成出借可获1.5倍积分。"/>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_bottom"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_content"
+                android:background="@drawable/pic_integral_rule_bottom"
+                android:visibility="gone"/>
+        </RelativeLayout>
+    </ScrollView>
+
+</LinearLayout>

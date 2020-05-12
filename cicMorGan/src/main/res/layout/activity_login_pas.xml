@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+    <!-- <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical" >
+
+            <EditText
+                android:id="@+id/et_old_pas"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:background="@null"
+                android:hint="请输入旧密码"
+                android:password="true"
+                android:textColor="@color/investment_detail_text"
+                android:textColorHint="@color/investment_detail_text"
+                android:textSize="13sp"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                 />
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/bg_gray" />
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_marginLeft="15dp" >
+
+                <EditText
+                    android:id="@+id/et_phone_code"
+                    android:layout_width="fill_parent"
+                    android:layout_height="38dp"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginTop="2dp"
+                    android:background="@null"
+                    android:hint="请输入手机验证码"
+                    android:textColor="@color/investment_detail_text"
+                    android:textColorHint="@color/investment_detail_text"
+                    android:textSize="13sp"
+                    android:imeOptions="actionDone"
+                    android:singleLine="true"
+                    />
+
+                <TextView
+                    android:id="@+id/tv_get_phone_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:layout_marginRight="10dp"
+                    android:padding="5dp"
+                    android:text="获取验证码"
+                    android:textColor="@color/black"
+                    android:textSize="13sp" />
+            </RelativeLayout>
+
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:background="@color/bg_gray" />
+
+            <EditText
+                android:id="@+id/et_new_pas"
+                android:layout_width="fill_parent"
+                android:layout_height="38dp"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="15dp"
+                android:layout_marginTop="2dp"
+                android:background="@null"
+                android:hint="请输入新密码"
+                android:password="true"
+                android:textColor="@color/investment_detail_text"
+                android:textColorHint="@color/investment_detail_text"
+                android:textSize="13sp"
+                android:imeOptions="actionDone"
+                android:singleLine="true"
+                 />
+        </LinearLayout> -->
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp">
+
+        <EditText
+            android:id="@+id/et_old_pas"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="50dp"
+            android:background="@null"
+            android:hint="请输入原密码"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@color/text_333333"
+            android:textColorHint="@color/register_text_color"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/register_text_color"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <EditText
+            android:id="@+id/et_new_pas"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/rl_eyes"
+            android:background="@null"
+            android:hint="请输入新密码"
+            android:imeOptions="actionDone"
+            android:password="true"
+            android:singleLine="true"
+            android:textColor="@color/text_333333"
+            android:textColorHint="@color/register_text_color"
+            android:textSize="17sp"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_eyes"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp">
+
+            <Button
+                android:id="@+id/iv_eyes_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/pic_pas"/>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/register_text_color"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp"
+        android:visibility="gone">
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="fill_parent"
+            android:layout_height="56dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="115dp"
+            android:background="@null"
+            android:hint="请输入短信验证码"
+            android:imeOptions="actionDone"
+            android:inputType="number"
+            android:singleLine="true"
+            android:textColor="@color/text_333333"
+            android:textColorHint="@color/register_text_color"
+            android:textSize="17sp"/>
+
+        <ImageView
+            android:id="@+id/iv_showCode"
+            android:layout_width="100dp"
+            android:layout_height="fill_parent"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="56dp">
+
+        <TextView
+            android:id="@+id/tv_before_send_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:padding="10dp"
+            android:text="发送验证码"
+            android:textColor="@color/blue"
+            android:textSize="13sp"/>
+
+        <EditText
+            android:id="@+id/et_before_phone_code"
+            android:layout_width="fill_parent"
+            android:layout_height="61dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginStart="13dp"
+            android:layout_toLeftOf="@+id/tv_before_send_code"
+            android:background="@null"
+            android:hint="请输入短信验证码"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+            android:textColor="@color/text_34393c"
+            android:textColorHint="@color/text_cccccc"
+            android:textSize="17sp"/>
+    </RelativeLayout>
+
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:background="@color/register_text_color"/>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+
+        <Button
+            android:id="@+id/bt_modify_pwd"
+            android:layout_width="fill_parent"
+            android:layout_height="38dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/bt_red"
+            android:text="修改"
+            android:textColor="@color/textColorWhite"
+            android:textSize="21sp"/>
+
+        <TextView
+            android:id="@+id/tv_tip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="20dp"
+            android:gravity="center_horizontal"
+            android:text="*市场有风险，出借需谨慎"
+            android:textColor="#c7c7c7"
+            android:textSize="12sp"
+            android:visibility="gone"/>
+    </RelativeLayout>
+
+</LinearLayout>

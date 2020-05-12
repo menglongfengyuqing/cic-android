@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="320dp"
+              android:layout_height="220dp"
+              android:background="@drawable/bg_write_upgrade"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="25dp"
+        android:text="请输入登录密码"
+        android:textColor="@color/text_34393c"
+        android:textSize="21sp"/>
+
+    <EditText
+        android:id="@+id/et_pas"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginTop="32dp"
+        android:background="@null"
+        android:hint="登录密码"
+        android:imeOptions="actionDone"
+        android:password="true"
+        android:singleLine="true"
+        android:textColor="@color/text_34393c"
+        android:textColorHint="@color/text_cccccc"
+        android:textSize="15sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/text_cccccc">
+    </View>
+
+    <Button
+        android:id="@+id/bt_submit"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_gravity="center"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:layout_marginTop="30dp"
+        android:background="@drawable/bt_red"
+        android:text="确认"
+        android:textColor="@color/white"
+        android:textSize="15sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="36dp"></View>
+
+
+</LinearLayout>

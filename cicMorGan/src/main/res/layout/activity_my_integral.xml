@@ -1,0 +1,279 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/text_cccccc"
+        android:progressDrawable="@drawable/progress_bg"/>
+
+    <View
+        android:id="@+id/v_head_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/white">
+    </View>
+
+    <ScrollView
+        android:id="@+id/sv_content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.5"
+                android:background="@drawable/pic_draw_bg"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="390dp"
+                    android:layout_marginTop="110dp"
+                    android:background="@drawable/pic_draw_tableredframe"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/pic_draw_tablelight_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="290dp"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginRight="15dp"
+                        android:background="@drawable/pic_draw_tablelight_3">
+                    </ImageView>
+
+                    <!--<ImageView-->
+                    <!--android:id="@+id/pic_draw_tablelight_2"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="290dp"-->
+                    <!--android:layout_centerVertical="true"-->
+                    <!--android:layout_marginLeft="15dp"-->
+                    <!--android:layout_marginRight="15dp"-->
+                    <!--android:background="@drawable/pic_draw_tablelight_2"-->
+                    <!--android:visibility="gone">-->
+                    <!--</ImageView>-->
+
+                    <com.ztmg.cicmorgan.investment.activity.MyGridView
+                        android:id="@+id/gridview"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="16dp"
+                        android:layout_marginRight="16dp"
+                        android:horizontalSpacing="1dp"
+                        android:listSelector="@android:color/transparent"
+                        android:numColumns="3"
+                        android:padding="16dp"
+                        android:verticalSpacing="1dp">
+                    </com.ztmg.cicmorgan.investment.activity.MyGridView>
+                </RelativeLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/bg_win"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="40dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp">
+
+                    <TextView
+                        android:id="@+id/tv_number"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="15sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/me_prize"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="查看我的奖品"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"/>
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:background="@drawable/icon_draw_detail_white"/>
+                    </LinearLayout>
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="61dp"
+                    android:layout_marginBottom="40dp"
+                    android:background="@drawable/pic_draw_shadow_gray">
+
+                    <TextView
+                        android:id="@+id/tv_my_integral"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentLeft="true"
+                        android:layout_centerInParent="true"
+                        android:text="我的积分："
+                        android:textColor="@color/white"
+                        android:textSize="17sp"/>
+
+                    <LinearLayout
+                        android:id="@+id/tv_look_rule"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_centerInParent="true"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="积分规则"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"/>
+
+
+                        <ImageView
+                            android:layout_width="18dp"
+                            android:layout_height="18dp"
+                            android:background="@drawable/icon_draw_detail_white"/>
+
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pic_draw_title_namelist"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="获奖名单"
+                        android:textColor="@color/text_333333"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+                </LinearLayout>
+
+                <ListView
+                    android:id="@+id/listView1"
+                    android:layout_width="match_parent"
+                    android:layout_height="180dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/pic_draw_shadow_gray"
+                    android:divider="#00000000"
+                    android:dividerHeight="20dp"
+                    android:scrollbars="none">
+                </ListView>
+
+
+                <LinearLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="50dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/pic_draw_title_rules"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:text="抽奖规则"
+                        android:textColor="@color/text_333333"
+                        android:textSize="17sp"
+                        android:textStyle="bold"
+                        android:visibility="gone"/>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/pic_draw_shadow_gray"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        style="@style/common_lottery_rule"
+                        android:text="1. 抽奖赢不停每次抽奖消耗10积分，每日抽奖次数最多10次。"/>
+
+                    <TextView
+                        style="@style/common_lottery_rule"
+                        android:text="2. 实物类奖品需要您配合填写邮寄信息，奖品将在兑换后20个工作日内寄出，邮费由中投摩根承担。"/>
+
+                    <TextView
+                        style="@style/common_lottery_rule"
+                        android:text="3. 中奖物品可以到我的奖品查看。"/>
+
+                    <TextView
+                        style="@style/common_lottery_rule"
+                        android:text="4. 若抽到实物物品，请到我的奖品填写收货地址。"/>
+
+                    <TextView
+                        style="@style/common_lottery_rule"
+                        android:text="5. 以上抽奖规则最终解释权归中投摩根所有。"/>
+
+                    <TextView
+                        android:id="@+id/tv_tip"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_horizontal"
+                        android:text="*市场有风险，出借需谨慎"
+                        android:textColor="@color/white"
+                        android:textSize="12sp"
+                        android:visibility="gone"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>

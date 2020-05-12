@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="90dp">
+
+        <ImageView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/pic_no_login"/>
+
+        <TextView
+            android:id="@+id/tv_login_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="160dp"
+            android:text="您还未登录"
+            android:textColor="@color/text_666666"
+            android:textSize="18sp"/>
+
+        <TextView
+            android:id="@+id/tv_login_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_login_text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="15dp"
+            android:text="(登录后才能查看更多)"
+            android:textColor="@color/text_666666"
+            android:textSize="18sp"/>
+
+        <Button
+            android:id="@+id/bt_investment_login"
+            android:layout_width="fill_parent"
+            android:layout_height="40dp"
+            android:layout_below="@id/tv_login_more"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/bt_red"
+            android:text="登录"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:id="@+id/tv_back_home"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/bt_investment_login"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="14dp"
+            android:padding="10dp"
+            android:text="返回首页"
+            android:textColor="@color/blue"
+            android:textSize="17sp"
+            android:textStyle="bold"/>
+    </RelativeLayout>
+
+</RelativeLayout>

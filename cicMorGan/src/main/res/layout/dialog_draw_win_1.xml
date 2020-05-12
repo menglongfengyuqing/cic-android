@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/parent"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/yes_prize"
+        android:layout_width="325dp"
+        android:layout_height="500dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/pic_draw_pop_1">
+
+
+        <ImageView
+            android:id="@+id/iv_draw_img"
+            android:layout_width="110dp"
+            android:layout_height="110dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="217dp"
+            android:paddingTop="20dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/remind"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_draw_img"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="12dp"
+            android:text=""/>
+
+
+        <TextView
+            android:id="@+id/tv_hint_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            android:layout_marginBottom="65dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            android:gravity="center"
+            android:text=""
+            android:textColor="@color/white"
+            android:textSize="13sp"/>
+    </RelativeLayout>
+
+
+    <!--<RelativeLayout-->
+    <!--android:id="@+id/no_prize"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="455dp"-->
+    <!--android:layout_centerHorizontal="true"-->
+    <!--android:layout_centerInParent="true"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginBottom="106dp"-->
+    <!--android:layout_marginTop="106dp"-->
+    <!--android:background="@drawable/pic_draw_pop_2"/>-->
+
+    <ImageView
+        android:id="@+id/no_prize"
+        android:layout_width="match_parent"
+        android:layout_height="550dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/pic_draw_pop_2"
+        android:scaleType="fitXY"
+        android:visibility="gone"/>
+
+
+</RelativeLayout>

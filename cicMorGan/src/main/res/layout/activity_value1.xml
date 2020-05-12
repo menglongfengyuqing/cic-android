@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white"
+    >
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="44dp"
+        android:background="@color/black" >
+
+        <RelativeLayout
+            android:id="@+id/rl_back"
+            android:layout_width="70dp"
+            android:layout_height="44dp" >
+
+            <ImageView
+                android:id="@+id/iv_left_img"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="28dp"
+                android:background="@drawable/back"
+                android:gravity="center_vertical" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@id/rl_back"
+            android:orientation="vertical" >
+
+            <RadioGroup
+                android:id="@+id/rg_main"
+                android:layout_width="match_parent"
+                android:layout_height="43dip"
+                android:background="@color/black"
+                android:orientation="horizontal" >
+
+                <RadioButton
+                    android:id="@+id/rb_serve_card"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="0dip"
+                    android:text="抵用券"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+
+                <RadioButton
+                    android:id="@+id/rb_raising_rates_card"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:button="@null"
+                    android:gravity="center"
+                    android:padding="0dip"
+                    android:text="加息券"
+                    android:textColor="@color/white"
+                    android:textSize="20sp" />
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dip"
+                android:background="@color/black"
+                android:orientation="horizontal" >
+
+                <View
+                    android:id="@+id/linebc1"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:visibility="visible" />
+
+                <View
+                    android:id="@+id/linebc2"
+                    android:layout_width="0dip"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    android:visibility="invisible" />
+            </LinearLayout>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:id="@+id/rl_serve_card_out"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_out"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已过期"
+                android:textColor="@color/account_ansaction_text"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/v_serve_card_out_line"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@id/tv_out"
+                android:layout_alignParentBottom="true"
+                android:layout_marginLeft="3dp"
+                android:background="@color/red2" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_serve_card_use"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_use"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="可使用"
+                android:textColor="@color/account_ansaction_text"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/v_serve_card_use_line"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@id/tv_use"
+                android:layout_alignParentBottom="true"
+                android:background="@color/red2"
+                android:visibility="gone" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_serve_card_used"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center" >
+
+            <TextView
+                android:id="@+id/tv_used"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已使用"
+                android:textColor="@color/account_ansaction_text"
+                android:textSize="17sp" />
+
+            <View
+                android:id="@+id/v_serve_card_used_line"
+                android:layout_width="wrap_content"
+                android:layout_height="1dp"
+                android:layout_alignBottom="@id/tv_used"
+                android:layout_alignParentBottom="true"
+                android:layout_marginRight="3dp"
+                android:background="@color/red2"
+                android:visibility="gone" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="13dp"
+        android:background="@color/bg_gray" />
+
+    <ListView
+        android:id="@+id/lv_value_voucher"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:divider="@null" 
+        android:scrollbars="none"
+        >
+    </ListView>
+
+</LinearLayout>

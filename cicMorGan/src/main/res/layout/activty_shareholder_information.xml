@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/text_cccccc"
+        android:progressDrawable="@drawable/progress_bg"/>
+
+    <LinearLayout
+        android:id="@+id/ll_have_message"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="61dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="85dp"
+                android:layout_height="61dp"
+                android:gravity="center"
+                android:text="股东类型"
+                android:textColor="@color/text_34393c"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="110dp"
+                android:layout_height="61dp"
+                android:gravity="center"
+                android:text="证件类型"
+                android:textColor="@color/text_34393c"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="61dp"
+                android:gravity="center"
+                android:text="股东名称"
+                android:textColor="@color/text_34393c"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/text_f5f5f5">
+        </View>
+
+        <ListView
+            android:id="@+id/lv_shareholder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:divider="@null"
+            android:scrollbars="none">
+        </ListView>
+
+        <LinearLayout
+            android:id="@+id/ll_no_message"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_f5f5f5"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/iv_no_award"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/pic_emptypage_3"/>
+
+            <TextView
+                android:id="@+id/tv_no_award_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="暂无股东信息"
+                android:textColor="@color/text_989898"
+                android:textSize="15sp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+
+</LinearLayout>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_dialog_close"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:paddingBottom="8dp"
+            android:paddingLeft="8dp"
+            android:src="@drawable/dialog_beijing_close"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="320dp"
+        android:layout_height="220dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/bg_write_upgrade"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="25dp"
+            android:text="温馨提示"
+            android:textColor="@color/text_34393c"
+            android:textSize="21sp"/>
+
+        <TextView
+            android:id="@+id/tv_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+            android:padding="15dp"
+            android:text="您当前出借后剩余可投金额小于100元，可一次性出借全部剩余可投金额，或者出借小于xxxx元。"
+            android:textColor="@color/text_34393c"
+            android:textSize="15sp"/>
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <TextView
+                android:id="@+id/tv_no"
+                android:layout_width="110dp"
+                android:layout_height="36dp"
+                android:background="@drawable/bg_red_hollow_dialog_version"
+                android:gravity="center"
+                android:text="取消"
+                android:textColor="@color/text_d40f42"
+                android:textSize="18sp"/>
+
+
+            <TextView
+                android:id="@+id/tv_yes"
+                android:layout_width="110dp"
+                android:layout_height="36dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/bt_red"
+                android:gravity="center"
+                android:text="已了解"
+                android:textColor="@color/white"
+                android:textSize="18sp"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

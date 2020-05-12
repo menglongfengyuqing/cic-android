@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+    android:background="@color/white"
+    >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="47dp"
+        android:gravity="center"
+        android:orientation="vertical" >
+	<RadioGroup 
+	    android:id="@+id/rg_main"
+	    android:layout_width="match_parent"
+	    android:layout_height="match_parent"
+	    android:orientation="horizontal">
+
+		<RadioButton
+		    android:id="@+id/rb_serve_card_out"
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:button="@null"
+		       android:gravity="center"
+                android:padding="0dip"
+		    android:text="已过期" />
+		<RadioButton
+		      android:id="@+id/rb_serve_card_use"
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:button="@null"
+		       android:gravity="center"
+                android:padding="0dip"
+		    android:text="可使用" />
+		<RadioButton
+		     android:id="@+id/rb_serve_card_used"
+		    android:layout_width="0dp"
+		    android:layout_height="match_parent"
+		    android:layout_weight="1"
+		    android:button="@null"
+		       android:gravity="center"
+                android:padding="0dip"
+		    android:text="已使用" />
+
+	</RadioGroup>
+         <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dip"
+            android:background="@color/red2"
+            android:orientation="horizontal" >
+
+            <View
+                android:id="@+id/linebc0"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/recharge"
+                android:visibility="visible" />
+            <View
+                android:id="@+id/linebc1"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/recharge"
+                android:visibility="visible" />
+
+            <View
+                android:id="@+id/linebc2"
+                android:layout_width="0dip"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@color/recharge"
+                android:visibility="invisible" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="13dp"
+        android:background="@color/bg_gray" />
+
+    <ListView
+        android:id="@+id/fl_serve_use"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent" 
+        android:scrollbars="none"
+        >
+    </ListView>
+
+</LinearLayout>

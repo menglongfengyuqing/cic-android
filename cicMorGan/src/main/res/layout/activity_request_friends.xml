@@ -1,0 +1,626 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <include layout="@layout/activity_base"/>
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="@style/Base.Widget.AppCompat.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/text_cccccc"
+        android:progressDrawable="@drawable/progress_bg"/>
+
+    <ScrollView
+        android:id="@+id/sc_content"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/text_ff5985"
+            android:orientation="vertical">
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/pic_invitefriends_kv">
+
+                <ImageView
+                    android:id="@+id/iv_title_img"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/btn_invitefriends_scorerules"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="112dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="470dp"
+                    android:alpha="0.8"
+                    android:background="@drawable/bg_invite_friend"
+                    android:orientation="horizontal">
+
+
+                    <LinearLayout
+                        android:id="@+id/rl_already_obtain"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+
+                            <ImageView
+                                android:id="@+id/iv_hot"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/icon_invitefriends_figureoncard"/>
+
+                            <TextView
+                                android:id="@+id/tv_text"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/iv_hot"
+                                android:text="您已邀请好友"
+                                android:textColor="@color/text_666666"
+                                android:textSize="17sp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:gravity="center">
+
+
+                            <TextView
+                                android:id="@+id/tv_friend_num"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="47dp"
+                                android:text=""
+                                android:textColor="@color/text_ff5985"
+                                android:textSize="25sp"/>
+
+                            <TextView
+                                android:id="@+id/tv_ren"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="5dp"
+                                android:layout_marginTop="10dp"
+                                android:layout_toRightOf="@+id/tv_friend_num"
+                                android:text="人"
+                                android:textColor="@color/text_ff5985"
+                                android:textSize="15sp"/>
+
+                            <ImageView
+                                android:id="@+id/image_im"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/tv_ren"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:layout_marginTop="11dp"
+                                android:background="@drawable/icon_invitefriends_detail"/>
+                        </RelativeLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/rl_already_request_friends"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+
+
+                            <ImageView
+                                android:id="@+id/iv_hot1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="5dp"
+                                android:background="@drawable/icon_invitefriends_figureoncard"/>
+
+                            <TextView
+                                android:id="@+id/tv_text1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerVertical="true"
+                                android:layout_marginLeft="10dp"
+                                android:layout_toRightOf="@+id/iv_hot1"
+                                android:text="您获得的积分"
+                                android:textColor="@color/text_666666"
+                                android:textSize="17sp"/>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp">
+
+                            <TextView
+                                android:id="@+id/tv_friend_investment_money"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginLeft="47dp"
+                                android:text=""
+                                android:textColor="@color/text_ff5985"
+                                android:textSize="25sp"/>
+
+
+                            <TextView
+                                android:id="@+id/tv_fen"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="10dp"
+                                android:layout_toRightOf="@+id/tv_friend_investment_money"
+                                android:text="分"
+                                android:textColor="@color/text_ff5985"
+                                android:textSize="15sp"/>
+
+                            <ImageView
+                                android:id="@+id/image"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignBottom="@+id/tv_fen"
+                                android:layout_alignParentRight="true"
+                                android:layout_marginRight="20dp"
+                                android:background="@drawable/icon_invitefriends_detail"/>
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="20dp"
+                android:layout_marginTop="30dp">
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="225dp"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:background="@drawable/bg_invite_friend"
+                    android:orientation="vertical">
+
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="55dp"
+                        android:gravity="center">
+
+
+                        <ImageView
+                            android:id="@+id/iv_image"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/icon_invitefriends_figureoncard"/>
+
+                        <TextView
+                            android:id="@+id/tv_text2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_toRightOf="@+id/iv_image"
+                            android:text="方式1  点击下方链接邀请好友"
+                            android:textColor="@color/text_34393c"
+                            android:textSize="17sp"/>
+
+                    </RelativeLayout>
+
+
+                    <RelativeLayout
+                        android:id="@+id/bt_request_friends"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mRelativeLayout"
+                        android:layout_marginLeft="28.5dp"
+                        android:layout_marginRight="28.5dp"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/pic_invitefriends_rectangleforlink">
+
+                        <TextView
+                            android:id="@+id/tv_url"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="10dp"
+                            android:gravity="center"
+                            android:singleLine="false"
+                            android:text=""
+                            android:textColor="@color/text_294FCC"/>
+                    </RelativeLayout>
+
+
+                </RelativeLayout>
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="380dp"
+                    android:layout_below="@+id/relativeLayout"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_invite_friend"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="55dp"
+                        android:gravity="center">
+
+
+                        <ImageView
+                            android:id="@+id/iv_image2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/icon_invitefriends_figureoncard"/>
+
+                        <TextView
+                            android:id="@+id/tv_text3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_toRightOf="@+id/iv_image2"
+                            android:text="方式2  面对面扫描下方二维码  "
+                            android:textColor="@color/text_34393c"
+                            android:textSize="17sp"/>
+
+                    </RelativeLayout>
+
+
+                    <ImageView
+                        android:id="@+id/iv_two_code"
+                        android:layout_width="175dp"
+                        android:layout_height="175dp"
+                        android:layout_below="@+id/mRelativeLayout2"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/pic_investment_detail"
+                        android:scaleType="fitXY"/>
+
+                </RelativeLayout>
+
+                <ImageView
+                    android:id="@+id/imageView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="195dp"
+                    android:background="@drawable/pic_invitefriends_connectionbetweencards"/>
+
+
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="270dp"
+                    android:layout_below="@+id/relativeLayout1"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginTop="5dp"
+                    android:background="@drawable/bg_invite_friend"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/mRelativeLayout4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="55dp"
+                        android:gravity="center">
+
+
+                        <ImageView
+                            android:id="@+id/iv_image3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="5dp"
+                            android:background="@drawable/icon_invitefriends_figureoncard"/>
+
+                        <TextView
+                            android:id="@+id/tv_text4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="25dp"
+                            android:layout_toRightOf="@+id/iv_image3"
+                            android:text="方式3  注册时填写你的手机号"
+                            android:textColor="@color/text_34393c"
+                            android:textSize="17sp"/>
+
+                    </RelativeLayout>
+
+
+                    <Button
+                        android:id="@+id/bt_copy"
+                        android:layout_width="260dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/mRelativeLayout4"
+                        android:layout_centerHorizontal="true"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginTop="25dp"
+                        android:background="@drawable/pic_invitefriends_bgforcodeonmethod3"
+                        android:padding="15dp"
+                        android:text=""
+                        android:textColor="@color/white"
+                        android:textSize="16sp"/>
+                    <!--<RelativeLayout-->
+                    <!--android:id="@+id/mRelativeLayout5"-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_below="@+id/mRelativeLayout4"-->
+                    <!--android:layout_marginLeft="28.5dp"-->
+                    <!--android:layout_marginRight="28.5dp"-->
+                    <!--android:layout_marginTop="25dp"-->
+                    <!--android:background="@drawable/pic_invitefriends_bgforcodeonmethod3">-->
+
+                    <!--<TextView-->
+                    <!--android:layout_width="match_parent"-->
+                    <!--android:layout_height="wrap_content"-->
+                    <!--android:layout_margin="10dp"-->
+                    <!--android:gravity="left"-->
+                    <!--android:text="https://www.baidu.com/s?wd=android%20%20NCalendar%20rsv_spt="-->
+                    <!--android:textColor="@color/white"/>-->
+                    <!--</RelativeLayout>-->
+
+                </RelativeLayout>
+
+
+                <ImageView
+                    android:id="@+id/imageView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/imageView2"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="320dp"
+                    android:background="@drawable/pic_invitefriends_connectionbetweencards"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="34dp"
+                    android:background="@drawable/pic_invitefriends_figureoncard_2"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="430dp"
+                    android:background="@drawable/pic_invitefriends_figureoncard_3"/>
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/relativeLayout1"
+                    android:layout_marginTop="200dp"
+                    android:background="@drawable/pic_invitefriends_figureoncard_4"/>
+            </RelativeLayout>
+
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="17dp"-->
+            <!--android:text="方式一：发送链接邀请"-->
+            <!--android:textColor="#4F4647"-->
+            <!--android:textSize="13sp"/>-->
+
+            <!--<Button-->
+            <!--android:id="@+id/bt_request_friends"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="38dp"-->
+            <!--android:layout_marginLeft="15dp"-->
+            <!--android:layout_marginRight="15dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:background="@drawable/bt_red"-->
+            <!--android:text="立即邀请"-->
+            <!--android:textColor="@color/textColorWhite"-->
+            <!--android:textSize="16sp"/>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<View-->
+            <!--android:id="@+id/v_line_left"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_marginTop="24dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#d4d4d4"/>-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_text_middle"-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:text="或"-->
+            <!--android:textColor="#d4d4d4"-->
+            <!--android:textSize="15dp"/>-->
+
+            <!--<View-->
+            <!--android:id="@+id/v_line_right"-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginTop="24dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#d4d4d4"/>-->
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:text="方式二：面对面扫码邀请"-->
+            <!--android:textColor="#4F4647"-->
+            <!--android:textSize="13sp"/>-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content">-->
+
+            <!--<ImageView-->
+            <!--android:id="@+id/iv_two_code"-->
+            <!--android:layout_width="200dp"-->
+            <!--android:layout_height="200dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:background="@drawable/pic_investment_detail"-->
+            <!--android:scaleType="fitXY"-->
+            <!--/>-->
+
+            <!--<ImageView-->
+            <!--android:layout_width="60dp"-->
+            <!--android:layout_height="60dp"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="59dp"-->
+            <!--android:background="@drawable/pic_investment_detail"-->
+            <!--android:scaleType="fitXY"-->
+            <!--android:visibility="gone"/>-->
+            <!--</RelativeLayout>-->
+
+            <!--<LinearLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:orientation="horizontal">-->
+
+            <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:layout_marginRight="20dp"-->
+            <!--android:layout_marginTop="24dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#d4d4d4"/>-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_centerHorizontal="true"-->
+            <!--android:layout_marginTop="16dp"-->
+            <!--android:text="或"-->
+            <!--android:textColor="#d4d4d4"-->
+            <!--android:textSize="15dp"/>-->
+
+            <!--<View-->
+            <!--android:layout_width="0dp"-->
+            <!--android:layout_height="0.5dp"-->
+            <!--android:layout_alignParentRight="true"-->
+            <!--android:layout_marginLeft="20dp"-->
+            <!--android:layout_marginTop="24dp"-->
+            <!--android:layout_weight="1"-->
+            <!--android:background="#d4d4d4"/>-->
+            <!--</LinearLayout>-->
+
+            <!--<TextView-->
+            <!--android:layout_width="wrap_content"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="30dp"-->
+            <!--android:text="方式三：注册填写你的邀请码"-->
+            <!--android:textColor="#4F4647"-->
+            <!--android:textSize="13sp"/>-->
+
+            <!--<Button-->
+            <!--android:id="@+id/bg_request_code"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="34dp"-->
+            <!--android:layout_marginLeft="25dp"-->
+            <!--android:layout_marginRight="25dp"-->
+            <!--android:layout_marginTop="20dp"-->
+            <!--android:background="@drawable/bg_white"-->
+            <!--android:text=""-->
+            <!--android:textColor="#b9b9b9"-->
+            <!--android:textSize="16sp"/>-->
+
+            <!--<Button-->
+            <!--android:id="@+id/bt_copy"-->
+            <!--android:layout_width="121dp"-->
+            <!--android:layout_height="32dp"-->
+            <!--android:layout_gravity="center_horizontal"-->
+            <!--android:layout_marginTop="22dp"-->
+            <!--android:background="@drawable/bt_red"-->
+            <!--android:text="复制"-->
+            <!--android:textColor="@color/textColorWhite"-->
+            <!--android:textSize="16sp"/>-->
+
+            <!--<RelativeLayout-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:background="@drawable/request_friends_botttom">-->
+
+            <!--<TextView-->
+            <!--android:id="@+id/tv_tip"-->
+            <!--android:layout_width="fill_parent"-->
+            <!--android:layout_height="wrap_content"-->
+            <!--android:layout_alignParentBottom="true"-->
+            <!--android:gravity="center_horizontal"-->
+            <!--android:paddingBottom="17dp"-->
+            <!--android:text="*市场有风险，出借需谨慎"-->
+            <!--android:textColor="#c7c7c7"-->
+            <!--android:textSize="12sp"/>-->
+            <!--</RelativeLayout>-->
+        </LinearLayout>
+    </ScrollView>
+
+
+</LinearLayout>

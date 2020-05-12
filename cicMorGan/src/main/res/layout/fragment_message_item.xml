@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/ll_top"
+        android:layout_width="match_parent"
+        android:layout_height="50dp">
+
+        <ImageView
+            android:id="@+id/iv_img"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:visibility="gone"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="5dp"
+            android:layout_toLeftOf="@+id/tv_time"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text=""
+            android:textColor="@color/text_34393c"
+            android:textSize="15sp"/>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="15dp"
+            android:text="2018-08-17"
+            android:textColor="@color/investment_detail_text"
+            android:textSize="15sp"/>
+    </RelativeLayout>
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_title"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/ll_top"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:layout_marginTop="10dp"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/investment_detail_text"-->
+    <!--android:textSize="13sp"/>-->
+
+    <!--<TextView-->
+    <!--android:id="@+id/tv_content"-->
+    <!--android:layout_width="match_parent"-->
+    <!--android:layout_height="wrap_content"-->
+    <!--android:layout_below="@id/tv_title"-->
+    <!--android:layout_centerVertical="true"-->
+    <!--android:layout_marginLeft="50dp"-->
+    <!--android:layout_marginRight="15dp"-->
+    <!--android:layout_marginTop="3dp"-->
+    <!--android:text=""-->
+    <!--android:textColor="@color/investment_detail_text"-->
+    <!--android:textSize="13sp"/>-->
+
+    <View
+        style="@style/common_small_line"
+        android:layout_below="@id/ll_top"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="56dp"
+              android:background="@color/white"
+              android:orientation="horizontal">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="56dp">
+
+        <ImageView
+            android:id="@+id/iv_notice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/img_notice"/>
+
+        <ViewFlipper
+            android:id="@+id/id_scrollNoticeTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toLeftOf="@+id/rl_notice_list"
+            android:layout_toRightOf="@id/iv_notice"
+            android:flipInterval="2000"
+            android:measureAllChildren="false"
+            android:paddingBottom="0.5dp"
+            android:paddingTop="0.5dp">
+
+            <TextView
+                android:id="@+id/id_scrollNoticeContent1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#2d2d2d"
+                android:textSize="14sp"/>
+
+            <TextView
+                android:id="@+id/id_scrollNoticeContent2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#2d2d2d"
+                android:textSize="14sp"
+                android:visibility="gone"
+                />
+        </ViewFlipper>
+
+        <ImageView
+            android:id="@+id/rl_notice_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/btn_more"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

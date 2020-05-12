@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:id="@+id/rl_inpossesson"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_inpossesson"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="募集中"
+                android:textColor="@color/blue"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/text_inpossesson_line"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/text_a11c3f"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_daysdue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_daysdue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="回款中"
+                android:textColor="@color/text_666666"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/text_daysdue_line"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/text_a11c3f"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rl_ended"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tv_ended"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="已结束"
+                android:textColor="@color/text_666666"
+                android:textSize="17sp"/>
+
+            <TextView
+                android:id="@+id/text_ended_line"
+                android:layout_width="100dp"
+                android:layout_height="2dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:background="@color/text_a11c3f"
+                android:visibility="invisible"
+                />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="fill_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/text_cccccc"/>
+
+    <FrameLayout
+        android:id="@+id/fl_safe_invest"
+        android:layout_width="match_parent"
+        android:layout_height="fill_parent">
+    </FrameLayout>
+
+</LinearLayout>

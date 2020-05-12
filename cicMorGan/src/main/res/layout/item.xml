@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="fill_parent"
+                android:layout_height="124dp"
+                android:gravity="center">
+
+    <RelativeLayout
+        android:id="@+id/rl_disk"
+        android:layout_width="100dp"
+        android:layout_height="83dp"
+        android:layout_margin="1dp"
+        android:background="@drawable/pic_draw_tablemodule_normal">
+
+
+        <RelativeLayout
+            android:layout_width="100dp"
+            android:layout_height="83dp">
+
+            <ImageView
+                android:id="@+id/iv_mask"
+                android:layout_width="100dp"
+                android:layout_height="83dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/pic_draw_tablemodule_selected"
+                android:scaleType="fitXY"
+                android:visibility="gone"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/text_view"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerInParent="true"
+            android:gravity="center"
+            android:text="很遗憾\n未中奖"
+            android:textColor="@color/text_63061D"
+            android:textSize="16sp"
+            android:visibility="gone"/>
+
+        <ImageView
+            android:id="@+id/img"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:scaleType="fitXY"/>
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="3dp"
+            android:ellipsize="end"
+            android:maxEms="10"
+            android:singleLine="true"
+            android:text=""
+            android:textColor="@color/text_63061D"
+            android:textSize="13sp"/>
+
+        <!--        <ImageView
+                    android:id="@+id/iv_mask"
+                    android:layout_width="fill_parent"
+                    android:layout_height="124dp"
+                    android:alpha="0.2"
+                    android:src="#000000"
+                    android:visibility="gone"/>-->
+        <!--<ImageView-->
+        <!--android:id="@+id/iv_mask"-->
+        <!--android:layout_width="100dp"-->
+        <!--android:layout_height="83dp"-->
+        <!--android:layout_centerInParent="true"-->
+        <!--android:layout_margin="1dp"-->
+        <!--android:background="@drawable/pic_draw_tablemodule_selected"-->
+        <!--android:scaleType="fitXY"-->
+        <!--android:visibility="gone"/>-->
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rl_draw"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="1dp"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_draw_bt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/pic_draw_table_btn"/>
+
+        <!--<LinearLayout-->
+        <!--android:id="@+id/ll_check_prize"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/iv_draw_bt"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="4dp"-->
+        <!--android:orientation="horizontal"-->
+        <!--android:visibility="gone">-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_text"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:text="查看奖品"-->
+        <!--android:textColor="@color/red2"-->
+        <!--android:textSize="12sp"/>-->
+
+        <!--<ImageView-->
+        <!--android:layout_width="12dp"-->
+        <!--android:layout_height="12dp"-->
+        <!--android:layout_marginLeft="10dp"-->
+        <!--android:layout_marginTop="2dp"-->
+        <!--android:background="@drawable/pic_enter_right"/>-->
+        <!--</LinearLayout>-->
+
+        <!--<TextView-->
+        <!--android:id="@+id/tv_consume_integral"-->
+        <!--android:layout_width="wrap_content"-->
+        <!--android:layout_height="wrap_content"-->
+        <!--android:layout_below="@id/ll_check_prize"-->
+        <!--android:layout_centerHorizontal="true"-->
+        <!--android:layout_marginTop="3dp"-->
+        <!--android:text="每次抽奖消耗10积分"-->
+        <!--android:textColor="#4f5b5a"-->
+        <!--android:textSize="11sp"-->
+        <!--android:visibility="gone"/>-->
+    </RelativeLayout>
+
+</RelativeLayout>

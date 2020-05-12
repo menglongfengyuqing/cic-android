@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_tuxing_code"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_marginLeft="30dp"
+            android:layout_marginTop="20dp"
+             >
+            <ImageView 
+               android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_dialog_code"
+                />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:background="@drawable/bg_dialog_code_bg" />
+<!--  <TextView
+                android:id="@+id/tv_code"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text=""
+                android:textColor="@color/blue"
+                android:textSize="19sp" /> -->
+                
+                <ImageView 
+                    android:id="@+id/iv_showCode"  
+                    android:layout_width="100dp"  
+            android:layout_height="fill_parent"
+            android:layout_centerInParent="true"
+                    />
+           
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_again_send"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="15dp"
+            android:paddingTop="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingBottom="30dp"
+            android:text="看不清，换一张"
+            android:textColor="#a11d3f"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="30dp"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal" >
+
+        <TextView
+            android:id="@+id/tv_code_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="30dp"
+            android:text="验证码"
+            android:textColor="#636363"
+            android:textSize="15sp" />
+
+        <EditText
+            android:id="@+id/et_code"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:background="@drawable/bg_editext_code"
+            android:imeOptions="actionDone"
+            android:singleLine="true"
+             />
+
+        <Button
+            android:id="@+id/bt_confirm"
+            android:layout_width="80dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="44dp"
+            android:layout_marginRight="15dp"
+            android:background="#a11d2f"
+            android:text="确定"
+            android:textColor="#fdfdfd"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+</LinearLayout>

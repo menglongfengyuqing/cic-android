@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="320dp"
+              android:layout_height="match_parent"
+              android:layout_gravity="center_horizontal"
+              android:background="@drawable/bg_write_upgrade"
+              android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="30dp"
+        android:text="新版本升级"
+        android:textColor="@color/text_34393c"
+        android:textSize="21sp"/>
+
+    <TextView
+        android:id="@+id/tv_new_version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="20dp"
+        android:text="更新内容："
+        android:textColor="@color/text_34393c"
+        android:textSize="15sp"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="33dp"
+        android:layout_marginRight="33dp"
+        android:layout_marginTop="5dp"
+        android:lineSpacingExtra="5dp"
+        android:text=""
+        android:textColor="@color/text_34393c"
+        android:textSize="15sp"/>
+
+    <LinearLayout
+        android:id="@+id/ll_no_update"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/bt_not_update"
+            android:layout_width="110dp"
+            android:layout_height="36dp"
+            android:background="@drawable/bg_red_hollow_dialog_version"
+            android:text="暂不更新"
+            android:textColor="@color/text_d40f42"
+            android:textSize="17sp"/>
+
+        <Button
+            android:id="@+id/bt_new"
+            android:layout_width="110dp"
+            android:layout_height="36dp"
+            android:layout_marginLeft="34dp"
+            android:background="@drawable/bt_red"
+            android:text="立即更新"
+            android:textColor="@color/white"
+            android:textSize="17sp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/bt_force_update"
+        android:layout_width="match_parent"
+        android:layout_height="36dp"
+        android:layout_marginLeft="45dp"
+        android:layout_marginRight="45dp"
+        android:background="@drawable/bt_red"
+        android:text="立即更新"
+        android:textColor="@color/white"
+        android:textSize="17sp"
+        android:visibility="gone"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="25dp"
+        ></View>
+
+</LinearLayout>

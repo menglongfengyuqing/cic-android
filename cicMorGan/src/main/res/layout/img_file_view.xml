@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="374dp"
+    android:layout_marginTop="20dp" >
+
+    <!-- 放置轮播图片位置 -->
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="374dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/iv_left"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/pic_left" />
+
+        <LinearLayout
+            android:id="@+id/ll_top_view_pager"
+            android:layout_width="272dp"
+            android:layout_height="374dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal" />
+
+        <ImageView
+            android:id="@+id/iv_right"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/pic_right" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="30dp"
+        android:layout_alignParentBottom="true"
+        android:gravity="center_vertical"
+        android:orientation="horizontal" >
+
+        <!-- 放置图片标题的位置 -->
+
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="8dp"
+            android:layout_weight="1"
+            android:singleLine="true"
+            android:text="图片标题"
+            android:textColor="#F6F6F6"
+            android:visibility="gone" />
+        <!-- 放置图片中选中点的位置 -->
+
+        <LinearLayout
+            android:id="@+id/ll_dot"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:orientation="horizontal"
+            android:visibility="gone" />
+    </LinearLayout>
+
+</RelativeLayout>
